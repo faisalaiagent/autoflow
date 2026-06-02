@@ -1,21 +1,39 @@
-// Single universal Supabase client for browser use
-import { createBrowserClient } from '@supabase/ssr'
+/**
+ * Supabase client — uses plain @supabase/supabase-js everywhere.
+ * No SSR package needed. Works in browser, API routes, and server components.
+ */
+import { createClient as _create } from '@supabase/supabase-js'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? ''
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? ''
+const URL  = process.env.NEXT_PUBLIC_SUPABASE_URL  ?? ''
+const ANON = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? ''
+
+// Singleton browser client
+let _browser: ReturnType<typeof _create> | null = null
 
 export function createClient() {
-  return createBrowserClient(supabaseUrl, supabaseAnonKey)
-}
-
-// Alias for server-side usage in API routes
-export function getSupabaseServerClient() {
-  const { createClient: createServerClient } = require('@supabase/supabase-js')
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY ?? supabaseAnonKey
-  return createServerClient(supabaseUrl, key, {
-    auth: { autoRefreshToken: false, persistSession: false },
+  if (typeof window !== 'undefined') {
+    // Browser — reuse singleton
+    if (!_browser) {
+      _browser = _create(URL, ANON, {
+        auth: {
+          persistSession: true,
+          autoRefreshToken: true,
+          detectSessionInUrl: true,
+          storageKey: 'autoflow-auth',
+        },
+      })
+    }
+    return _browser
+  }
+  // Server — new instance per call (no cookies needed for our use case)
+  return _create(URL, ANON, {
+    auth: { persistSession: false, autoRefreshToken: false },
   })
 }
 
-// Alias for backwards compatibility
+// Aliases used across the codebase
 export const getSupabaseBrowserClient = createClient
+export function getSupabaseServerClient() {
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY ?? ANON
+  return _create(URL, key, { auth: { persistSession: false, autoRefreshToken: false } })
+}

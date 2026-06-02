@@ -106,7 +106,7 @@ export function DashboardSidebar({ onClose }: DashboardSidebarProps) {
         >
           <div className="w-1.5 h-1.5 rounded-full animate-pulse flex-shrink-0" style={{ background: 'var(--accent-cyan)' }} />
           <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: 'var(--text-muted)', letterSpacing: '0.03em' }}>
-            Gemini 2.5 Flash
+            Groq LLaMA 3
           </span>
         </div>
       </div>

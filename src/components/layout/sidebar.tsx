@@ -49,11 +49,11 @@ export function DashboardSidebar() {
         </Link>
       </div>
 
-      {/* Gemini badge */}
+      {/* Groq badge */}
       <div className="mx-4 mt-4">
         <div className="flex items-center gap-2 bg-[#7c6bff]/10 border border-[#7c6bff]/20 rounded-lg px-3 py-2">
           <Sparkles size={12} className="text-[#7c6bff]" />
-          <span className="font-mono-custom text-[10px] text-[#7c6bff] uppercase tracking-widest">Gemini 2.5 Flash</span>
+          <span className="font-mono-custom text-[10px] text-[#7c6bff] uppercase tracking-widest">Groq LLaMA 3</span>
           <span className="ml-auto w-1.5 h-1.5 bg-[#6bffcc] rounded-full animate-pulse" />
         </div>
       </div>

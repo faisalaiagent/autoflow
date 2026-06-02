@@ -21,7 +21,7 @@ const suggestions = [
 const eventColors = ['#7c6bff', '#ff6b9d', '#6bffcc', '#ffb86b']
 
 export default function CalendarPage() {
-  const { events, addEvent, incrementStat, geminiApiKey } = useAgentStore()
+  const { events, addEvent, incrementStat, groqApiKey } = useAgentStore()
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState<{ message: string; suggestions: string[]; conflicts: string[] } | null>(null)
@@ -33,7 +33,7 @@ export default function CalendarPage() {
       const res = await fetch('/api/calendar-agent', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ request: input, existing_events: events, api_key: geminiApiKey }),
+        body: JSON.stringify({ request: input, existing_events: events, api_key: groqApiKey }),
       })
       const data = await res.json()
       if (data.success) {

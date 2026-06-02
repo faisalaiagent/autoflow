@@ -32,7 +32,7 @@ Mike: Will do. Should we schedule a follow-up to review progress?
 Sarah: Yes — let's meet again in two weeks. I'll send the invite.`
 
 export default function MeetingsPage() {
-  const { addMeeting, incrementStat, meetings, geminiApiKey } = useAgentStore()
+  const { addMeeting, incrementStat, meetings, groqApiKey } = useAgentStore()
   const [title, setTitle] = useState('')
   const [transcript, setTranscript] = useState('')
   const [loading, setLoading] = useState(false)
@@ -47,7 +47,7 @@ export default function MeetingsPage() {
       const res = await fetch('/api/meeting-agent', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ transcript, meeting_title: title || 'Team Meeting', api_key: geminiApiKey }),
+        body: JSON.stringify({ transcript, meeting_title: title || 'Team Meeting', api_key: groqApiKey }),
       })
       const data = await res.json()
       if (data.success) {
@@ -125,7 +125,7 @@ export default function MeetingsPage() {
                     </div>
                     <div>
                       <h2 style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '14px', color: 'var(--text)' }}>Meeting Summarizer</h2>
-                      <p style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: 'var(--text-muted)' }}>Powered by Gemini 2.5 Flash</p>
+                      <p style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: 'var(--text-muted)' }}>Powered by Groq LLaMA 3</p>
                     </div>
                   </div>
                   <Badge variant="pink" size="sm">AI Agent</Badge>
@@ -222,7 +222,7 @@ export default function MeetingsPage() {
                     <div className="w-12 h-12 rounded-2xl flex items-center justify-center animate-pulse" style={{ background: 'rgba(255,107,157,0.15)', border: '1px solid rgba(255,107,157,0.25)' }}>
                       <Sparkles size={20} style={{ color: 'var(--accent-pink)' }} />
                     </div>
-                    <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '12px', color: 'var(--text-muted)' }}>Analyzing meeting with Gemini…</span>
+                    <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '12px', color: 'var(--text-muted)' }}>Analyzing meeting with Groq AI…</span>
                   </div>
                 )}
 

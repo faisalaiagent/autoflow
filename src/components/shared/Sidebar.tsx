@@ -147,7 +147,7 @@ export default function Sidebar({ onClose }: SidebarProps) {
           style={{ background: 'var(--surface-2)', border: '1px solid var(--border-color)' }}>
           <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: 'var(--accent-cyan)', flexShrink: 0 }} />
           <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: 'var(--text-muted)' }}>
-            Gemini 2.5 Flash
+            Groq LLaMA 3
           </span>
         </div>
       </div>

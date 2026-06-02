@@ -69,7 +69,7 @@ export function useTaskAgent() {
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<TaskAgentResult | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const { tasks, addTask, incrementStat, geminiApiKey } = useAgentStore();
+  const { tasks, addTask, incrementStat, groqApiKey } = useAgentStore();
 
   const process = async (input: string) => {
     setLoading(true);
@@ -95,7 +95,7 @@ export function useCalendarAgent() {
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<CalendarAgentResult | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const { events, addEvent, incrementStat, geminiApiKey } = useAgentStore();
+  const { events, addEvent, incrementStat, groqApiKey } = useAgentStore();
 
   const request = async (userRequest: string) => {
     setLoading(true);

@@ -22,7 +22,7 @@ const suggestions = [
 ]
 
 export default function TasksPage() {
-  const { tasks, addTask, updateTask, incrementStat, geminiApiKey } = useAgentStore()
+  const { tasks, addTask, updateTask, incrementStat, groqApiKey } = useAgentStore()
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
   const [agentMessage, setAgentMessage] = useState<{ message: string; tip: string } | null>(null)
@@ -35,7 +35,7 @@ export default function TasksPage() {
       const res = await fetch('/api/task-agent', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ input, existing_tasks: tasks, api_key: geminiApiKey }),
+        body: JSON.stringify({ input, existing_tasks: tasks, api_key: groqApiKey }),
       })
       const data = await res.json()
       if (data.success) {

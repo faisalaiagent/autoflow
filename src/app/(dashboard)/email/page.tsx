@@ -24,7 +24,7 @@ const toneOptions = [
 ]
 
 export default function EmailPage() {
-  const { geminiApiKey, emailHistory, addEmail, incrementStat } = useAgentStore()
+  const { groqApiKey, emailHistory, addEmail, incrementStat } = useAgentStore()
   const [emailContent, setEmailContent] = useState('')
   const [tone, setTone] = useState('professional')
   const [context, setContext] = useState('')
@@ -33,13 +33,13 @@ export default function EmailPage() {
 
   const handleGenerate = async () => {
     if (!emailContent.trim()) { toast('Please paste an email first', 'error'); return }
-    if (!geminiApiKey) { toast('Add your Gemini API key in Settings first', 'error'); return }
+    if (!groqApiKey) { toast('Add your Groq API key in Settings first', 'error'); return }
     setLoading(true)
     try {
       const res = await fetch('/api/email-agent', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email_content: emailContent, tone, context, api_key: geminiApiKey }),
+        body: JSON.stringify({ email_content: emailContent, tone, context, api_key: groqApiKey }),
       })
       const data = await res.json()
       if (data.success) {
@@ -66,11 +66,11 @@ export default function EmailPage() {
       <TopBar title="Email Agent" subtitle="Generate polished email replies with AI" />
 
       {/* No API key warning */}
-      {!geminiApiKey && (
+      {!groqApiKey && (
         <div className="mx-4 md:mx-6 mt-4 flex items-center gap-3 px-4 py-3 rounded-xl" style={{ background: 'rgba(251,191,36,0.08)', border: '1px solid rgba(251,191,36,0.2)' }}>
           <Key size={15} style={{ color: '#fbbf24', flexShrink: 0 }} />
           <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '13px', color: 'var(--text-muted)', flex: 1 }}>
-            Add your Gemini API key to start generating replies.
+            Add your free Groq API key in Settings to start generating replies.
           </p>
           <Link href="/settings" style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '12px', color: '#fbbf24', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px', flexShrink: 0 }}>
             <Settings size={12} /> Open Settings
@@ -100,7 +100,7 @@ export default function EmailPage() {
                   <Input label="Context (optional)" placeholder="Any extra context..." value={context} onChange={e => setContext(e.target.value)} />
                 </div>
                 <div className="flex gap-3 pt-2">
-                  <Button variant="iris" onClick={handleGenerate} loading={loading} className="flex-1" disabled={!geminiApiKey}>
+                  <Button variant="iris" onClick={handleGenerate} loading={loading} className="flex-1" disabled={!groqApiKey}>
                     <Sparkles className="w-4 h-4" />
                     {loading ? 'Generating…' : 'Generate Reply'}
                   </Button>

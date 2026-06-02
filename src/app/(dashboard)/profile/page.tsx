@@ -101,7 +101,7 @@ export default function ProfilePage() {
                 Starter Plan
               </div>
               <div className="px-2 py-0.5 rounded-md" style={{ background: 'rgba(124,107,255,0.1)', border: '1px solid rgba(124,107,255,0.2)', fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: 'var(--accent)' }}>
-                Gemini 2.5 Flash
+                Groq LLaMA 3
               </div>
             </div>
           </div>

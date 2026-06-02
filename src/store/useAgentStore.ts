@@ -10,15 +10,15 @@ interface Stats {
 }
 
 interface AgentStoreState {
-  // ── API Key (stored locally per user) ────────────────────────────────────
-  geminiApiKey: string;
-  setGeminiApiKey: (key: string) => void;
+  // API Key
+  groqApiKey: string;
+  setGroqApiKey: (key: string) => void;
 
-  // ── Stats ─────────────────────────────────────────────────────────────────
+  // Stats
   stats: Stats;
   incrementStat: (key: keyof Stats) => void;
 
-  // ── Data ──────────────────────────────────────────────────────────────────
+  // Data
   tasks: Task[];
   meetings: MeetingSummaryResult[];
   emailHistory: EmailHistoryItem[];
@@ -35,16 +35,13 @@ interface AgentStoreState {
 export const useAgentStore = create<AgentStoreState>()(
   persist(
     (set) => ({
-      // API Key
-      geminiApiKey: '',
-      setGeminiApiKey: (key) => set({ geminiApiKey: key }),
+      groqApiKey: '',
+      setGroqApiKey: (key) => set({ groqApiKey: key }),
 
-      // Stats
       stats: { emails_processed: 0, meetings_summarized: 0, tasks_total: 0, events_scheduled: 0 },
       incrementStat: (key) =>
         set((s) => ({ stats: { ...s.stats, [key]: s.stats[key] + 1 } })),
 
-      // Data
       tasks: [],
       meetings: [],
       emailHistory: [],
@@ -82,10 +79,9 @@ export const useAgentStore = create<AgentStoreState>()(
         }),
     }),
     {
-      name: 'autoflow-agent-store',
-      // Persist everything including the API key
+      name: 'autoflow-agent-store-v2',
       partialize: (s) => ({
-        geminiApiKey: s.geminiApiKey,
+        groqApiKey: s.groqApiKey,
         stats: s.stats,
         tasks: s.tasks,
         meetings: s.meetings,

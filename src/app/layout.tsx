@@ -23,7 +23,7 @@ const instrumentSans = Instrument_Sans({
 
 export const metadata: Metadata = {
   title: 'AutoFlow AI — Intelligent Workflow Automation',
-  description: '4 powerful AI agents for email replies, meeting summaries, task management, and calendar scheduling — powered by Gemini 2.5 Flash.',
+  description: '4 powerful AI agents for email replies, meeting summaries, task management, and calendar scheduling — powered by Groq LLaMA 3.',
   keywords: ['AI automation', 'workflow', 'email assistant', 'meeting summary', 'task manager', 'calendar AI'],
   openGraph: {
     title: 'AutoFlow AI',

@@ -38,7 +38,7 @@ const agents = [
     border: 'rgba(107,255,204,0.2)',
     label: 'Task Manager Agent',
     badge: 'Agent 03',
-    desc: 'Speak to your task list in plain English. Create, prioritize, complete, and analyze tasks using natural language commands powered by Gemini.',
+    desc: 'Speak to your task list in plain English. Create, prioritize, complete, and analyze tasks using natural language commands powered by Groq AI.',
     features: ['Natural language input', 'Priority intelligence', 'Productivity tips', 'Status tracking'],
   },
   {
@@ -123,15 +123,15 @@ const pricing = [
 const faqs = [
   {
     q: 'Which AI model powers AutoFlow?',
-    a: 'AutoFlow runs on Google Gemini 2.5 Flash — one of the fastest, most capable models available. It\'s free-tier eligible so you can use your own API key at no extra cost.',
+    a: 'AutoFlow runs on Google Groq LLaMA 3 — one of the fastest, most capable models available. It\'s free-tier eligible so you can use your own API key at no extra cost.',
   },
   {
     q: 'Is my data stored securely?',
     a: 'In the free tier, data is stored locally in your browser. The Pro plan connects to Supabase for secure cloud persistence with row-level security and encryption at rest.',
   },
   {
-    q: 'Can I use my own Gemini API key?',
-    a: 'Absolutely. You set your own GEMINI_API_KEY as an environment variable. This means you control your usage and costs directly through Google AI Studio.',
+    q: 'Can I use my own Groq API key?',
+    a: 'Absolutely. Yes — you paste your free Groq API key once in Settings. It's stored in your browser and sent with every request. Get yours free at console.groq.com.',
   },
   {
     q: 'Does the calendar agent sync with Google Calendar?',
@@ -281,7 +281,7 @@ export default function LandingPage() {
           >
             <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: 'var(--accent-cyan)' }} />
             <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '12px', color: 'var(--accent)', letterSpacing: '0.08em' }}>
-              Powered by Shah Faisal
+              Powered by Groq AI
             </span>
             <Sparkles size={12} style={{ color: 'var(--accent)' }} />
           </motion.div>
@@ -381,7 +381,7 @@ export default function LandingPage() {
             {[
               { value: '4', label: 'AI Agents' },
               { value: 'Free', label: 'To Start' },
-              { value: 'Gemini', label: '2.5 Flash' },
+              { value: 'Groq', label: 'LLaMA 3' },
               { value: '< 3s', label: 'Response Time' },
             ].map(({ value, label }) => (
               <div key={label} className="text-center">
@@ -412,10 +412,10 @@ export default function LandingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
-              { icon: Zap, color: '#7c6bff', title: 'Instant AI Responses', desc: 'Gemini 2.5 Flash delivers structured, intelligent responses in under 3 seconds — no waiting, no loading screens.' },
+              { icon: Zap, color: '#7c6bff', title: 'Instant AI Responses', desc: 'Groq LLaMA 3 delivers structured, intelligent responses in under 2 seconds — one of the fastest AI inference engines available.' },
               { icon: BarChart3, color: '#ff6b9d', title: 'Analytics Dashboard', desc: 'Track your productivity metrics, agent usage, task completion rates, and meeting sentiment trends over time.' },
               { icon: Globe, color: '#6bffcc', title: 'No Backend Required', desc: 'Next.js API routes handle everything. No separate server to manage, deploy, or maintain. Just your API key.' },
-              { icon: Shield, color: '#ffb86b', title: 'Your Data, Your Key', desc: 'You supply your own Gemini API key. No data is ever sent to AutoFlow servers. Complete privacy by design.' },
+              { icon: Shield, color: '#ffb86b', title: 'Your Data, Your Key', desc: 'You supply your own free Groq API key. No data is ever sent to AutoFlow servers. Complete privacy by design.' },
               { icon: Layers, color: '#7c6bff', title: 'Persistent Storage', desc: 'Connect Supabase for cloud-synced tasks, emails, meetings, and events that persist across all your devices.' },
               { icon: Users, color: '#ff6b9d', title: 'Team-Ready', desc: 'Shared workspaces, role-based permissions, and multi-user collaboration available on the Team plan.' },
             ].map((feat, i) => {
@@ -655,7 +655,7 @@ export default function LandingPage() {
             <span style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: '15px', color: 'var(--text)' }}>AutoFlow AI</span>
           </div>
           <p style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '11px', color: 'var(--text-subtle)' }}>
-            Built with Next.js · Gemini 2.5 Flash · Supabase · Tailwind CSS
+            Built with Next.js · Groq LLaMA 3 · Supabase · Tailwind CSS
           </p>
           <div className="flex gap-6">
             {['Features', 'Agents', 'Pricing', 'FAQ'].map(item => (

@@ -1,78 +1,61 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { generateJSON } from '@/lib/gemini';
-import { Task, TaskAgentResult } from '@/types';
+import { generateJSON, apiErrorMessage } from '@/lib/groq';
+import type { Task, TaskAgentResult } from '@/types';
 
-function apiError(code: string) {
-  if (code === 'NO_API_KEY') return 'No Gemini API key found. Please add your key in Settings → API Configuration.';
-  if (code === 'INVALID_API_KEY') return 'Invalid Gemini API key. Please check your key in Settings.';
-  return 'Failed to process task request. Please try again.';
-}
-
-// In-memory store (server-side, per-instance)
-const tasksStore: Task[] = [];
+const store: Task[] = [];
 
 export async function GET() {
-  return NextResponse.json({ success: true, tasks: tasksStore });
+  return NextResponse.json({ success: true, tasks: store });
 }
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const { input, existing_tasks } = body;
-    const userApiKey = body.api_key || req.headers.get('x-api-key') || undefined;
+    const userApiKey = body.api_key ?? undefined;
 
-    if (!input?.trim()) {
+    if (!input?.trim())
       return NextResponse.json({ success: false, error: 'Task input is required' }, { status: 400 });
-    }
 
-    const currentTasks = existing_tasks ?? tasksStore;
+    const current = existing_tasks ?? store;
+    const prompt = `You are an intelligent task manager AI.
 
-    const prompt = `You are an intelligent task management AI assistant.
+User request: "${input}"
+Current tasks (${current.length}): ${current.length > 0 ? JSON.stringify(current.slice(0, 5)) : 'none'}
 
-User Request: "${input}"
-
-Existing Tasks (${currentTasks.length} total):
-${currentTasks.length > 0 ? JSON.stringify(currentTasks.slice(0, 10), null, 2) : 'None yet'}
-
-Process this request and return ONLY valid JSON (no markdown, no extra text):
+Return ONLY a valid JSON object (no markdown, no code blocks):
 {
   "action": "create",
-  "tasks": [
-    {
-      "id": ${Date.now()},
-      "title": "[task title]",
-      "description": "[brief description]",
-      "priority": "high",
-      "status": "pending",
-      "due_date": null,
-      "tags": ["tag1"],
-      "estimated_hours": 2
-    }
-  ],
-  "message": "[friendly response to user]",
-  "productivity_tip": "[one actionable productivity tip]"
+  "tasks": [{
+    "id": ${Date.now()},
+    "title": "task title",
+    "description": "brief description",
+    "priority": "high",
+    "status": "pending",
+    "due_date": null,
+    "tags": ["tag"],
+    "estimated_hours": 2
+  }],
+  "message": "friendly response",
+  "productivity_tip": "one actionable tip"
 }
-Priority must be: high, medium, or low. Status must be: pending, in_progress, or completed.`;
+priority: high/medium/low, status: pending/in_progress/completed`;
 
-    const fallback: TaskAgentResult = {
+    const result = await generateJSON<TaskAgentResult>(prompt, {
       action: 'create',
       tasks: [],
-      message: 'Task processed.',
+      message: '',
       productivity_tip: '',
-    };
+    }, userApiKey);
 
-    const result = await generateJSON<TaskAgentResult>(prompt, fallback, userApiKey);
-
-    // Merge into store
     for (const t of result.tasks ?? []) {
-      const idx = tasksStore.findIndex(x => x.id === t.id);
-      if (idx >= 0) tasksStore[idx] = { ...tasksStore[idx], ...t };
-      else { if (!t.id) t.id = Date.now(); tasksStore.push(t as Task); }
+      const idx = store.findIndex(x => x.id === t.id);
+      if (idx >= 0) store[idx] = { ...store[idx], ...t };
+      else { if (!t.id) (t as any).id = Date.now(); store.push(t as Task); }
     }
 
-    return NextResponse.json({ success: true, result, all_tasks: tasksStore });
-  } catch (error: any) {
-    console.error('[task-agent]', error?.message);
-    return NextResponse.json({ success: false, error: apiError(error?.message ?? '') }, { status: 500 });
+    return NextResponse.json({ success: true, result, all_tasks: store });
+  } catch (e: any) {
+    return NextResponse.json({ success: false, error: apiErrorMessage(e?.message ?? '') }, { status: 500 });
   }
 }
