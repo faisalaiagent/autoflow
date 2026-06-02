@@ -18,7 +18,7 @@ const agents = [
     border: 'rgba(124,107,255,0.2)',
     label: 'Email Reply Bot',
     badge: 'Agent 01',
-    desc: 'Reads incoming emails and generates polished, context-aware replies with intelligent tone control — professional, friendly, formal, or empathetic.',
+    desc: 'Reads incoming emails and generates polished, context-aware replies with intelligent tone control  -  professional, friendly, formal, or empathetic.',
     features: ['Tone selection (5 modes)', 'Key points extraction', 'Smart follow-up suggestions', 'SMTP send integration'],
   },
   {
@@ -28,7 +28,7 @@ const agents = [
     border: 'rgba(255,107,157,0.2)',
     label: 'Meeting Summary Bot',
     badge: 'Agent 02',
-    desc: 'Transforms raw meeting transcripts into structured intelligence — summaries, action items, decisions, and the next meeting agenda in seconds.',
+    desc: 'Transforms raw meeting transcripts into structured intelligence  -  summaries, action items, decisions, and the next meeting agenda in seconds.',
     features: ['Executive summaries', 'Auto-assigned action items', 'Decision tracking', 'Sentiment analysis'],
   },
   {
@@ -123,7 +123,7 @@ const pricing = [
 const faqs = [
   {
     q: 'Which AI model powers AutoFlow?',
-    a: 'AutoFlow runs on Google Groq LLaMA 3 — one of the fastest, most capable models available. It\'s free-tier eligible so you can use your own API key at no extra cost.',
+    a: 'AutoFlow runs on Groq LLaMA 3  -  one of the fastest AI inference engines available. It is completely free to use with your own API key from console.groq.com.',
   },
   {
     q: 'Is my data stored securely?',
@@ -131,7 +131,7 @@ const faqs = [
   },
   {
     q: 'Can I use my own Groq API key?',
-    a: 'Absolutely. Yes — you paste your free Groq API key once in Settings. It's stored in your browser and sent with every request. Get yours free at console.groq.com.',
+    a: 'Yes. Paste your free Groq API key once in Settings. It is stored in your browser only and sent with every request. Get yours free at console.groq.com.',
   },
   {
     q: 'Does the calendar agent sync with Google Calendar?',
@@ -139,7 +139,7 @@ const faqs = [
   },
   {
     q: 'Can teams collaborate on the same workspace?',
-    a: 'Team collaboration is available on the Team plan — shared workspaces, role-based permissions, and real-time sync via Supabase Realtime.',
+    a: 'Team collaboration is available on the Team plan  -  shared workspaces, role-based permissions, and real-time sync via Supabase Realtime.',
   },
 ];
 
@@ -326,7 +326,7 @@ export default function LandingPage() {
             }}
           >
             4 intelligent AI agents that handle email replies, meeting summaries,
-            task management, and calendar scheduling — all in one premium platform.
+            task management, and calendar scheduling  -  all in one premium platform.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -412,7 +412,7 @@ export default function LandingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
-              { icon: Zap, color: '#7c6bff', title: 'Instant AI Responses', desc: 'Groq LLaMA 3 delivers structured, intelligent responses in under 2 seconds — one of the fastest AI inference engines available.' },
+              { icon: Zap, color: '#7c6bff', title: 'Instant AI Responses', desc: 'Groq LLaMA 3 delivers structured, intelligent responses in under 2 seconds  -  one of the fastest AI inference engines available.' },
               { icon: BarChart3, color: '#ff6b9d', title: 'Analytics Dashboard', desc: 'Track your productivity metrics, agent usage, task completion rates, and meeting sentiment trends over time.' },
               { icon: Globe, color: '#6bffcc', title: 'No Backend Required', desc: 'Next.js API routes handle everything. No separate server to manage, deploy, or maintain. Just your API key.' },
               { icon: Shield, color: '#ffb86b', title: 'Your Data, Your Key', desc: 'You supply your own free Groq API key. No data is ever sent to AutoFlow servers. Complete privacy by design.' },
