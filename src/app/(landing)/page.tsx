@@ -176,7 +176,7 @@ function NavBar() {
         </div>
 
         <div className="hidden md:flex items-center gap-8">
-          {['Features', 'Agents', 'Pricing', 'FAQ'].map(item => (
+          {['Features', 'Agents', 'Pricing', 'FAQ', 'About', 'Contact'].map(item => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -658,7 +658,7 @@ export default function LandingPage() {
             Built with Next.js · Groq LLaMA 3 · Supabase · Tailwind CSS
           </p>
           <div className="flex gap-6">
-            {['Features', 'Agents', 'Pricing', 'FAQ'].map(item => (
+            {['Features', 'Agents', 'Pricing', 'FAQ', 'About', 'Contact'].map(item => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
