@@ -176,15 +176,22 @@ function NavBar() {
         </div>
 
         <div className="hidden md:flex items-center gap-8">
-          {['Features', 'Agents', 'Pricing', 'FAQ', 'About', 'Contact'].map(item => (
+          {[
+            { label: 'Features', href: '#features' },
+            { label: 'Agents', href: '#agents' },
+            { label: 'Pricing', href: '#pricing' },
+            { label: 'FAQ', href: '#faq' },
+            { label: 'About', href: '/about' },
+            { label: 'Contact', href: '/contact' },
+          ].map(({ label, href }) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={label}
+              href={href}
               style={{ fontFamily: 'var(--font-instrument)', fontSize: '14px', color: 'var(--text-muted)', textDecoration: 'none', transition: 'color 0.15s' }}
               onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--text)')}
               onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}
             >
-              {item}
+              {label}
             </a>
           ))}
         </div>
@@ -281,7 +288,7 @@ export default function LandingPage() {
           >
             <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: 'var(--accent-cyan)' }} />
             <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '12px', color: 'var(--accent)', letterSpacing: '0.08em' }}>
-              Powered by Groq AI
+              Powered by Shah Faisal
             </span>
             <Sparkles size={12} style={{ color: 'var(--accent)' }} />
           </motion.div>
@@ -655,18 +662,26 @@ export default function LandingPage() {
             <span style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: '15px', color: 'var(--text)' }}>AutoFlow AI</span>
           </div>
           <p style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '11px', color: 'var(--text-subtle)' }}>
-            Built with Next.js · Groq LLaMA 3 · Supabase · Tailwind CSS
+            © {new Date().getFullYear()} AutoFlow AI. All rights reserved.
           </p>
-          <div className="flex gap-6">
-            {['Features', 'Agents', 'Pricing', 'FAQ', 'About', 'Contact'].map(item => (
+          <div className="flex flex-wrap gap-6 justify-center">
+            {[
+              { label: 'Features', href: '#features' },
+              { label: 'Agents', href: '#agents' },
+              { label: 'Pricing', href: '#pricing' },
+              { label: 'About', href: '/about' },
+              { label: 'Contact', href: '/contact' },
+              { label: 'Privacy', href: '/privacy' },
+              { label: 'Terms', href: '/terms' },
+            ].map(({ label, href }) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={label}
+                href={href}
                 style={{ fontFamily: 'var(--font-instrument)', fontSize: '13px', color: 'var(--text-muted)', textDecoration: 'none', transition: 'color 0.15s' }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--text)')}
                 onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}
               >
-                {item}
+                {label}
               </a>
             ))}
           </div>
