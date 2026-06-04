@@ -662,7 +662,7 @@ export default function LandingPage() {
             <span style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: '15px', color: 'var(--text)' }}>AutoFlow AI</span>
           </div>
           <p style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '11px', color: 'var(--text-subtle)' }}>
-            © {new Date().getFullYear()} AutoFlow AI. All rights reserved.
+            © 2024 AutoFlow AI. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-6 justify-center">
             {[
