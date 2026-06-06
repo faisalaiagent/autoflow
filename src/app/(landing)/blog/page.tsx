@@ -7,13 +7,24 @@ const posts = [
   {
     slug: 'ai-email-reply',
     title: 'How AI Can Write Your Emails Better Than You Think',
-    excerpt: 'Most professionals spend 2 to 3 hours every day just on email. Here is how an AI email agent changes that completely — and why the replies it generates are often better than what you would write yourself.',
+    excerpt: 'Most professionals spend 2 to 3 hours every day just on email. Here is how an AI email agent changes that completely — and why the replies it generates are often sharper and more effective than what most people write under pressure.',
     category: 'Email Productivity',
     readTime: '7 min read',
     date: 'June 4, 2024',
     color: '#7c6bff',
-    bg: 'rgba(124,107,255,0.08)',
+    bg: 'rgba(124,107,255,0.06)',
     border: 'rgba(124,107,255,0.2)',
+  },
+  {
+    slug: 'ai-meeting-summary',
+    title: 'Why Your Meetings Are Not the Problem — Your Notes Are',
+    excerpt: 'Most teams do not have a meeting problem. They have a follow-through problem. Everything discussed in the room vanishes within 48 hours because nobody captured it properly. Here is how an AI meeting summary agent changes that entirely.',
+    category: 'Meeting Productivity',
+    readTime: '8 min read',
+    date: 'June 5, 2024',
+    color: '#ff6b9d',
+    bg: 'rgba(255,107,157,0.06)',
+    border: 'rgba(255,107,157,0.2)',
   },
 ];
 
@@ -58,7 +69,7 @@ export default function BlogPage() {
                   onMouseEnter={e => (e.currentTarget.style.borderColor = post.color + '55')}
                   onMouseLeave={e => (e.currentTarget.style.borderColor = post.border)}
                 >
-                  <div className="flex items-center gap-3 mb-4">
+                  <div className="flex items-center gap-3 mb-4 flex-wrap">
                     <span className="px-3 py-1 rounded-full" style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: post.color, background: post.bg, border: `1px solid ${post.border}`, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
                       {post.category}
                     </span>
@@ -71,14 +82,14 @@ export default function BlogPage() {
                       <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px' }}>{post.date}</span>
                     </div>
                   </div>
-                  <h2 style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: 'clamp(1.2rem, 3vw, 1.6rem)', color: 'var(--text)', lineHeight: 1.2, marginBottom: '12px' }}>
+                  <h2 style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: 'clamp(1.1rem, 3vw, 1.5rem)', color: 'var(--text)', lineHeight: 1.2, marginBottom: '12px' }}>
                     {post.title}
                   </h2>
                   <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '15px', color: 'var(--text-muted)', lineHeight: 1.7, marginBottom: '16px' }}>
                     {post.excerpt}
                   </p>
                   <div className="flex items-center gap-2" style={{ color: post.color, fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '13px' }}>
-                    Read Article <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                    Read Article <ArrowRight size={14} />
                   </div>
                 </div>
               </Link>
@@ -90,7 +101,7 @@ export default function BlogPage() {
       <footer className="border-t px-6 py-8 text-center" style={{ borderColor: 'var(--border-color)' }}>
         <p style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '11px', color: 'var(--text-subtle)' }}>
           2024 AutoFlow AI. All rights reserved. |{' '}
-          <Link href="/privacy" style={{ color: 'var(--accent)', textDecoration: 'none' }}>Privacy Policy</Link> |{' '}
+          <Link href="/privacy" style={{ color: 'var(--accent)', textDecoration: 'none' }}>Privacy Policy</Link>{' '}|{' '}
           <Link href="/terms" style={{ color: 'var(--accent)', textDecoration: 'none' }}>Terms of Service</Link>
         </p>
       </footer>
