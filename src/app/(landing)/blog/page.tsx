@@ -7,7 +7,7 @@ const posts = [
   {
     slug: 'ai-email-reply',
     title: 'How AI Can Write Your Emails Better Than You Think',
-    excerpt: 'Most professionals spend 2 to 3 hours every day just on email. Here is how an AI email agent changes that completely — and why the replies it generates are often sharper and more effective than what most people write under pressure.',
+    excerpt: 'Most professionals spend 2 to 3 hours every day just on email. Here is how an AI email agent changes that completely and why the replies it generates are often sharper than what most people write under pressure.',
     category: 'Email Productivity',
     readTime: '7 min read',
     date: 'June 4, 2024',
@@ -18,13 +18,24 @@ const posts = [
   {
     slug: 'ai-meeting-summary',
     title: 'Why Your Meetings Are Not the Problem — Your Notes Are',
-    excerpt: 'Most teams do not have a meeting problem. They have a follow-through problem. Everything discussed in the room vanishes within 48 hours because nobody captured it properly. Here is how an AI meeting summary agent changes that entirely.',
+    excerpt: 'Most teams do not have a meeting problem. They have a follow-through problem. Everything discussed in the room vanishes within 48 hours because nobody captured it properly. Here is how an AI meeting summary agent changes that.',
     category: 'Meeting Productivity',
     readTime: '8 min read',
     date: 'June 5, 2024',
     color: '#ff6b9d',
     bg: 'rgba(255,107,157,0.06)',
     border: 'rgba(255,107,157,0.2)',
+  },
+  {
+    slug: 'ai-task-manager',
+    title: 'Stop Fighting Your Task Manager. Start Talking to It.',
+    excerpt: 'Most productivity tools make you do more work just to track your work. There is a better way — describe what needs to get done in plain English and an AI figures out the rest. Here is why natural language task management changes your day.',
+    category: 'Task Management',
+    readTime: '8 min read',
+    date: 'June 6, 2024',
+    color: '#6bffcc',
+    bg: 'rgba(107,255,204,0.06)',
+    border: 'rgba(107,255,204,0.2)',
   },
 ];
 
@@ -74,12 +85,10 @@ export default function BlogPage() {
                       {post.category}
                     </span>
                     <div className="flex items-center gap-1.5" style={{ color: 'var(--text-subtle)' }}>
-                      <Clock size={11} />
-                      <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px' }}>{post.readTime}</span>
+                      <Clock size={11} /><span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px' }}>{post.readTime}</span>
                     </div>
                     <div className="flex items-center gap-1.5" style={{ color: 'var(--text-subtle)' }}>
-                      <Calendar size={11} />
-                      <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px' }}>{post.date}</span>
+                      <Calendar size={11} /><span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px' }}>{post.date}</span>
                     </div>
                   </div>
                   <h2 style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: 'clamp(1.1rem, 3vw, 1.5rem)', color: 'var(--text)', lineHeight: 1.2, marginBottom: '12px' }}>
