@@ -18,7 +18,7 @@ const posts = [
   {
     slug: 'ai-meeting-summary',
     title: 'Why Your Meetings Are Not the Problem — Your Notes Are',
-    excerpt: 'Most teams do not have a meeting problem. They have a follow-through problem. Everything discussed in the room vanishes within 48 hours because nobody captured it properly. Here is how an AI meeting summary agent changes that.',
+    excerpt: 'Most teams do not have a meeting problem. They have a follow-through problem. Everything discussed in the room vanishes within 48 hours because nobody captured it properly. Here is how AI changes that.',
     category: 'Meeting Productivity',
     readTime: '8 min read',
     date: 'June 5, 2024',
@@ -29,13 +29,24 @@ const posts = [
   {
     slug: 'ai-task-manager',
     title: 'Stop Fighting Your Task Manager. Start Talking to It.',
-    excerpt: 'Most productivity tools make you do more work just to track your work. There is a better way — describe what needs to get done in plain English and an AI figures out the rest. Here is why natural language task management changes your day.',
+    excerpt: 'Most productivity tools make you do more work just to track your work. There is a better way — describe what needs to get done in plain English and an AI figures out the rest.',
     category: 'Task Management',
     readTime: '8 min read',
     date: 'June 6, 2024',
     color: '#6bffcc',
     bg: 'rgba(107,255,204,0.06)',
     border: 'rgba(107,255,204,0.2)',
+  },
+  {
+    slug: 'ai-calendar-assistant',
+    title: 'Your Calendar Should Work for You — Not the Other Way Around',
+    excerpt: 'Scheduling a meeting should not take six emails and three days. Managing your time should not feel like a second job. Here is why an AI calendar assistant changes the entire experience of owning your schedule.',
+    category: 'Calendar Productivity',
+    readTime: '8 min read',
+    date: 'June 7, 2024',
+    color: '#ffb86b',
+    bg: 'rgba(255,184,107,0.06)',
+    border: 'rgba(255,184,107,0.2)',
   },
 ];
 
@@ -72,7 +83,7 @@ export default function BlogPage() {
 
         <div className="space-y-6">
           {posts.map((post, i) => (
-            <motion.div key={post.slug} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.08 }}>
+            <motion.div key={post.slug} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.07 }}>
               <Link href={`/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
                 <div
                   className="p-7 rounded-2xl group cursor-pointer transition-all"
