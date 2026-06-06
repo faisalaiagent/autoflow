@@ -181,6 +181,7 @@ function NavBar() {
             { label: 'Agents', href: '#agents' },
             { label: 'Pricing', href: '#pricing' },
             { label: 'FAQ', href: '#faq' },
+            { label: 'Blog', href: '/blog' },
             { label: 'About', href: '/about' },
             { label: 'Contact', href: '/contact' },
           ].map(({ label, href }) => (
@@ -669,6 +670,7 @@ export default function LandingPage() {
               { label: 'Features', href: '#features' },
               { label: 'Agents', href: '#agents' },
               { label: 'Pricing', href: '#pricing' },
+              { label: 'Blog', href: '/blog' },
               { label: 'About', href: '/about' },
               { label: 'Contact', href: '/contact' },
               { label: 'Privacy', href: '/privacy' },
