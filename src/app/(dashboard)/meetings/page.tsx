@@ -87,9 +87,9 @@ export default function MeetingsPage() {
               onClick={() => setActiveTab('summarize')}
               className="px-3 py-1.5 rounded-lg text-xs transition-all"
               style={{
-                background: activeTab === 'summarize' ? 'rgba(255,107,157,0.15)' : 'var(--surface-2)',
+                background: activeTab === 'summarize' ? 'rgba(139,92,246,0.15)' : 'var(--surface-2)',
                 color: activeTab === 'summarize' ? 'var(--accent-pink)' : 'var(--text-muted)',
-                border: `1px solid ${activeTab === 'summarize' ? 'rgba(255,107,157,0.3)' : 'var(--border-color)'}`,
+                border: `1px solid ${activeTab === 'summarize' ? 'rgba(139,92,246,0.3)' : 'var(--border-color)'}`,
                 fontFamily: 'var(--font-dm-mono)', fontSize: '10px', cursor: 'pointer',
               }}
             >
@@ -99,9 +99,9 @@ export default function MeetingsPage() {
               onClick={() => setActiveTab('history')}
               className="px-3 py-1.5 rounded-lg text-xs transition-all"
               style={{
-                background: activeTab === 'history' ? 'rgba(255,107,157,0.15)' : 'var(--surface-2)',
+                background: activeTab === 'history' ? 'rgba(139,92,246,0.15)' : 'var(--surface-2)',
                 color: activeTab === 'history' ? 'var(--accent-pink)' : 'var(--text-muted)',
-                border: `1px solid ${activeTab === 'history' ? 'rgba(255,107,157,0.3)' : 'var(--border-color)'}`,
+                border: `1px solid ${activeTab === 'history' ? 'rgba(139,92,246,0.3)' : 'var(--border-color)'}`,
                 fontFamily: 'var(--font-dm-mono)', fontSize: '10px', cursor: 'pointer',
               }}
             >
@@ -120,7 +120,7 @@ export default function MeetingsPage() {
                 <div className="absolute top-0 left-0 right-0 h-px opacity-60" style={{ background: 'linear-gradient(90deg, transparent, var(--accent-pink), transparent)' }} />
                 <div className="flex items-center justify-between mb-5">
                   <div className="flex items-center gap-2.5">
-                    <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: 'rgba(255,107,157,0.15)', border: '1px solid rgba(255,107,157,0.25)' }}>
+                    <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: 'rgba(139,92,246,0.15)', border: '1px solid rgba(139,92,246,0.25)' }}>
                       <Mic size={16} style={{ color: 'var(--accent-pink)' }} />
                     </div>
                     <div>
@@ -173,7 +173,7 @@ export default function MeetingsPage() {
                         border: 'none',
                         cursor: loading || !transcript.trim() ? 'not-allowed' : 'pointer',
                         opacity: loading || !transcript.trim() ? 0.5 : 1,
-                        boxShadow: '0 4px 20px rgba(255,107,157,0.3)',
+                        boxShadow: '0 4px 20px rgba(139,92,246,0.3)',
                       }}
                     >
                       <Mic size={14} />
@@ -188,7 +188,7 @@ export default function MeetingsPage() {
                   </div>
                   <button
                     onClick={() => setTranscript(exampleTranscript)}
-                    style={{ width: '100%', padding: '8px', background: 'rgba(255,107,157,0.05)', border: '1px dashed rgba(255,107,157,0.2)', borderRadius: '8px', color: 'var(--accent-pink)', fontFamily: 'var(--font-dm-mono)', fontSize: '11px', cursor: 'pointer', letterSpacing: '0.03em' }}
+                    style={{ width: '100%', padding: '8px', background: 'rgba(139,92,246,0.05)', border: '1px dashed rgba(139,92,246,0.2)', borderRadius: '8px', color: 'var(--accent-pink)', fontFamily: 'var(--font-dm-mono)', fontSize: '11px', cursor: 'pointer', letterSpacing: '0.03em' }}
                   >
                     ↗ Load example transcript
                   </button>
@@ -219,7 +219,7 @@ export default function MeetingsPage() {
 
                 {loading && (
                   <div className="flex flex-col items-center justify-center py-16 gap-3">
-                    <div className="w-12 h-12 rounded-2xl flex items-center justify-center animate-pulse" style={{ background: 'rgba(255,107,157,0.15)', border: '1px solid rgba(255,107,157,0.25)' }}>
+                    <div className="w-12 h-12 rounded-2xl flex items-center justify-center animate-pulse" style={{ background: 'rgba(139,92,246,0.15)', border: '1px solid rgba(139,92,246,0.25)' }}>
                       <Sparkles size={20} style={{ color: 'var(--accent-pink)' }} />
                     </div>
                     <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '12px', color: 'var(--text-muted)' }}>Analyzing meeting with Groq AI…</span>
@@ -228,7 +228,7 @@ export default function MeetingsPage() {
 
                 {!loading && !result && (
                   <div className="flex flex-col items-center justify-center py-16 gap-3 text-center">
-                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center" style={{ background: 'rgba(255,107,157,0.1)', border: '1px solid rgba(255,107,157,0.2)' }}>
+                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center" style={{ background: 'rgba(139,92,246,0.1)', border: '1px solid rgba(139,92,246,0.2)' }}>
                       <Mic size={24} style={{ color: 'var(--accent-pink)' }} />
                     </div>
                     <h3 style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '15px', color: 'var(--text)' }}>Awaiting transcript</h3>
@@ -240,7 +240,7 @@ export default function MeetingsPage() {
                   {!loading && result && (
                     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="space-y-5 overflow-y-auto" style={{ maxHeight: '65vh' }}>
                       {/* Summary */}
-                      <div className="p-4 rounded-xl" style={{ background: 'rgba(255,107,157,0.06)', border: '1px solid rgba(255,107,157,0.15)' }}>
+                      <div className="p-4 rounded-xl" style={{ background: 'rgba(139,92,246,0.06)', border: '1px solid rgba(139,92,246,0.15)' }}>
                         <div className="flex items-center gap-1.5 mb-2">
                           <BookOpen size={12} style={{ color: 'var(--accent-pink)' }} />
                           <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: 'var(--accent-pink)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Summary</span>
@@ -258,7 +258,7 @@ export default function MeetingsPage() {
                           <div className="space-y-2">
                             {result.action_items.map((item, i) => (
                               <div key={i} className="flex items-start gap-3 p-3 rounded-xl" style={{ background: 'var(--surface-2)', border: '1px solid var(--border-color)' }}>
-                                <div className="w-5 h-5 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: 'rgba(107,255,204,0.15)', border: '1px solid rgba(107,255,204,0.25)' }}>
+                                <div className="w-5 h-5 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: 'rgba(16,185,129,0.15)', border: '1px solid rgba(16,185,129,0.25)' }}>
                                   <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '9px', color: 'var(--accent-cyan)', fontWeight: 700 }}>{i + 1}</span>
                                 </div>
                                 <div className="flex-1 min-w-0">
@@ -283,7 +283,7 @@ export default function MeetingsPage() {
                           </div>
                           <div className="flex flex-wrap gap-2">
                             {result.decisions.map((d, i) => (
-                              <span key={i} className="px-3 py-1.5 rounded-full" style={{ background: 'rgba(107,255,204,0.08)', border: '1px solid rgba(107,255,204,0.2)', color: 'var(--accent-cyan)', fontFamily: 'var(--font-instrument)', fontSize: '12px' }}>
+                              <span key={i} className="px-3 py-1.5 rounded-full" style={{ background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.2)', color: 'var(--accent-cyan)', fontFamily: 'var(--font-instrument)', fontSize: '12px' }}>
                                 ✓ {d}
                               </span>
                             ))}
@@ -336,7 +336,7 @@ export default function MeetingsPage() {
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}>
             {meetings.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-24 gap-3">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center" style={{ background: 'rgba(255,107,157,0.1)', border: '1px solid rgba(255,107,157,0.2)' }}>
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center" style={{ background: 'rgba(139,92,246,0.1)', border: '1px solid rgba(139,92,246,0.2)' }}>
                   <Mic size={24} style={{ color: 'var(--accent-pink)' }} />
                 </div>
                 <p style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '15px', color: 'var(--text)' }}>No meetings yet</p>

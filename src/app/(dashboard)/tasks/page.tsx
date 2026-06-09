@@ -79,7 +79,7 @@ export default function TasksPage() {
               <div className="absolute top-0 left-0 right-0 h-px opacity-60" style={{ background: 'linear-gradient(90deg, transparent, var(--accent-cyan), transparent)' }} />
               <div className="flex items-center justify-between mb-5">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: 'rgba(107,255,204,0.15)', border: '1px solid rgba(107,255,204,0.25)' }}>
+                  <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: 'rgba(16,185,129,0.15)', border: '1px solid rgba(16,185,129,0.25)' }}>
                     <CheckSquare size={16} style={{ color: 'var(--accent-cyan)' }} />
                   </div>
                   <div>
@@ -108,7 +108,7 @@ export default function TasksPage() {
                   onClick={handleProcess}
                   disabled={loading || !input.trim()}
                   className="w-full flex items-center justify-center gap-2 py-3 rounded-xl"
-                  style={{ background: 'var(--accent-cyan)', color: '#080810', fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '13px', border: 'none', cursor: loading || !input.trim() ? 'not-allowed' : 'pointer', opacity: loading || !input.trim() ? 0.5 : 1, boxShadow: '0 4px 20px rgba(107,255,204,0.25)' }}
+                  style={{ background: 'var(--accent-cyan)', color: '#0F172A', fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '13px', border: 'none', cursor: loading || !input.trim() ? 'not-allowed' : 'pointer', opacity: loading || !input.trim() ? 0.5 : 1, boxShadow: '0 4px 20px rgba(16,185,129,0.25)' }}
                 >
                   <CheckSquare size={14} />
                   {loading ? 'Processing…' : 'Run Task Agent'}
@@ -125,7 +125,7 @@ export default function TasksPage() {
               <div className="space-y-1.5">
                 {suggestions.map((s, i) => (
                   <button key={i} onClick={() => setInput(s)} className="w-full text-left px-3 py-2 rounded-lg transition-all" style={{ fontFamily: 'var(--font-instrument)', fontSize: '12px', color: 'var(--text-muted)', background: 'var(--surface-2)', border: '1px solid var(--border-color)', cursor: 'pointer' }}
-                    onMouseEnter={(e) => { (e.currentTarget.style.borderColor = 'rgba(107,255,204,0.3)'); (e.currentTarget.style.color = 'var(--text)') }}
+                    onMouseEnter={(e) => { (e.currentTarget.style.borderColor = 'rgba(16,185,129,0.3)'); (e.currentTarget.style.color = 'var(--text)') }}
                     onMouseLeave={(e) => { (e.currentTarget.style.borderColor = 'var(--border-color)'); (e.currentTarget.style.color = 'var(--text-muted)') }}
                   >
                     ↗ {s}
@@ -137,7 +137,7 @@ export default function TasksPage() {
             {/* Agent response */}
             <AnimatePresence>
               {agentMessage && (
-                <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="p-4 rounded-2xl" style={{ background: 'rgba(107,255,204,0.05)', border: '1px solid rgba(107,255,204,0.15)' }}>
+                <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="p-4 rounded-2xl" style={{ background: 'rgba(16,185,129,0.05)', border: '1px solid rgba(16,185,129,0.15)' }}>
                   <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '13px', color: 'var(--text)', lineHeight: 1.6 }}>🤖 {agentMessage.message}</p>
                   {agentMessage.tip && <p style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '11px', color: 'var(--accent-cyan)', marginTop: '8px' }}>💡 {agentMessage.tip}</p>}
                 </motion.div>
@@ -157,7 +157,7 @@ export default function TasksPage() {
             {tasks.length > 0 && (
               <div className="flex gap-1.5 mb-4 flex-wrap">
                 {(['all', 'pending', 'in_progress', 'completed'] as const).map((f) => (
-                  <button key={f} onClick={() => setFilter(f)} style={{ padding: '4px 10px', borderRadius: '6px', fontFamily: 'var(--font-dm-mono)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.05em', cursor: 'pointer', background: filter === f ? 'rgba(107,255,204,0.15)' : 'var(--surface-2)', color: filter === f ? 'var(--accent-cyan)' : 'var(--text-muted)', border: `1px solid ${filter === f ? 'rgba(107,255,204,0.3)' : 'var(--border-color)'}` }}>
+                  <button key={f} onClick={() => setFilter(f)} style={{ padding: '4px 10px', borderRadius: '6px', fontFamily: 'var(--font-dm-mono)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.05em', cursor: 'pointer', background: filter === f ? 'rgba(16,185,129,0.15)' : 'var(--surface-2)', color: filter === f ? 'var(--accent-cyan)' : 'var(--text-muted)', border: `1px solid ${filter === f ? 'rgba(16,185,129,0.3)' : 'var(--border-color)'}` }}>
                     {f.replace('_', ' ')} ({counts[f]})
                   </button>
                 ))}
@@ -166,7 +166,7 @@ export default function TasksPage() {
 
             {loading && (
               <div className="flex items-center justify-center py-12">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center animate-pulse" style={{ background: 'rgba(107,255,204,0.15)', border: '1px solid rgba(107,255,204,0.25)' }}>
+                <div className="w-8 h-8 rounded-full flex items-center justify-center animate-pulse" style={{ background: 'rgba(16,185,129,0.15)', border: '1px solid rgba(16,185,129,0.25)' }}>
                   <Sparkles size={16} style={{ color: 'var(--accent-cyan)' }} />
                 </div>
               </div>
@@ -174,7 +174,7 @@ export default function TasksPage() {
 
             {!loading && tasks.length === 0 && (
               <div className="flex flex-col items-center justify-center py-12 gap-3 text-center">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center" style={{ background: 'rgba(107,255,204,0.1)', border: '1px solid rgba(107,255,204,0.2)' }}>
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center" style={{ background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.2)' }}>
                   <CheckSquare size={24} style={{ color: 'var(--accent-cyan)' }} />
                 </div>
                 <h3 style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '14px', color: 'var(--text)' }}>No tasks yet</h3>
@@ -194,7 +194,7 @@ export default function TasksPage() {
                       transition={{ delay: i * 0.04 }}
                       className="flex items-center gap-3 px-4 py-3 rounded-xl"
                       style={{ background: 'var(--surface-2)', border: '1px solid var(--border-color)', opacity: task.status === 'completed' ? 0.55 : 1, transition: 'all 0.15s' }}
-                      onMouseEnter={(e) => (e.currentTarget.style.borderColor = 'rgba(107,255,204,0.25)')}
+                      onMouseEnter={(e) => (e.currentTarget.style.borderColor = 'rgba(16,185,129,0.25)')}
                       onMouseLeave={(e) => (e.currentTarget.style.borderColor = 'var(--border-color)')}
                     >
                       <button onClick={() => toggleComplete(task)} style={{ color: task.status === 'completed' ? 'var(--success)' : 'var(--text-subtle)', flexShrink: 0, cursor: 'pointer', background: 'none', border: 'none', padding: 0 }}>

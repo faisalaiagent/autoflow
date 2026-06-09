@@ -29,16 +29,16 @@ export function DashboardHeader() {
           <input
             type="text"
             placeholder="Search…"
-            className="bg-[#111118] border border-[#2a2a3a] text-white rounded-xl pl-9 pr-4 py-2 text-sm focus:outline-none focus:border-[#7c6bff] w-48 placeholder-[#5555aa] transition-all focus:w-64"
+            className="bg-[#111118] border border-[#2a2a3a] text-white rounded-xl pl-9 pr-4 py-2 text-sm focus:outline-none focus:border-[#6366F1] w-48 placeholder-[#5555aa] transition-all focus:w-64"
           />
         </div>
 
-        <button className="relative w-9 h-9 flex items-center justify-center bg-[#111118] border border-[#2a2a3a] rounded-xl text-[#8888aa] hover:text-white hover:border-[#7c6bff]/40 transition-all">
+        <button className="relative w-9 h-9 flex items-center justify-center bg-[#111118] border border-[#2a2a3a] rounded-xl text-[#8888aa] hover:text-white hover:border-[#6366F1]/40 transition-all">
           <Bell size={15} />
-          <span className="absolute top-2 right-2 w-1.5 h-1.5 bg-[#7c6bff] rounded-full" />
+          <span className="absolute top-2 right-2 w-1.5 h-1.5 bg-[#6366F1] rounded-full" />
         </button>
 
-        <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#7c6bff] to-[#ff6b9d] flex items-center justify-center text-white font-display font-bold text-sm">
+        <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] flex items-center justify-center text-white font-display font-bold text-sm">
           A
         </div>
       </div>

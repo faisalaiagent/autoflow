@@ -68,11 +68,11 @@ export default function EmailPage() {
       {/* No API key warning */}
       {!groqApiKey && (
         <div className="mx-4 md:mx-6 mt-4 flex items-center gap-3 px-4 py-3 rounded-xl" style={{ background: 'rgba(251,191,36,0.08)', border: '1px solid rgba(251,191,36,0.2)' }}>
-          <Key size={15} style={{ color: '#fbbf24', flexShrink: 0 }} />
+          <Key size={15} style={{ color: '#F59E0B', flexShrink: 0 }} />
           <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '13px', color: 'var(--text-muted)', flex: 1 }}>
             Add your free Groq API key in Settings to start generating replies.
           </p>
-          <Link href="/settings" style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '12px', color: '#fbbf24', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px', flexShrink: 0 }}>
+          <Link href="/settings" style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '12px', color: '#F59E0B', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '4px', flexShrink: 0 }}>
             <Settings size={12} /> Open Settings
           </Link>
         </div>

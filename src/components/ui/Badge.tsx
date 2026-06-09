@@ -8,13 +8,13 @@ interface BadgeProps {
 }
 
 const badgeVariants = {
-  purple: { bg: 'rgba(124,107,255,0.12)', color: 'var(--accent)', border: 'rgba(124,107,255,0.25)' },
-  iris: { bg: 'rgba(124,107,255,0.12)', color: 'var(--accent)', border: 'rgba(124,107,255,0.25)' },
-  pink: { bg: 'rgba(255,107,157,0.12)', color: 'var(--accent-pink)', border: 'rgba(255,107,157,0.25)' },
-  rose: { bg: 'rgba(255,107,157,0.12)', color: 'var(--accent-pink)', border: 'rgba(255,107,157,0.25)' },
-  cyan: { bg: 'rgba(107,255,204,0.12)', color: 'var(--accent-cyan)', border: 'rgba(107,255,204,0.25)' },
-  jade: { bg: 'rgba(107,255,204,0.12)', color: 'var(--accent-cyan)', border: 'rgba(107,255,204,0.25)' },
-  amber: { bg: 'rgba(255,184,107,0.12)', color: 'var(--accent-amber)', border: 'rgba(255,184,107,0.25)' },
+  purple: { bg: 'rgba(99,102,241,0.12)', color: 'var(--accent)', border: 'rgba(99,102,241,0.25)' },
+  iris: { bg: 'rgba(99,102,241,0.12)', color: 'var(--accent)', border: 'rgba(99,102,241,0.25)' },
+  pink: { bg: 'rgba(139,92,246,0.12)', color: 'var(--accent-pink)', border: 'rgba(139,92,246,0.25)' },
+  rose: { bg: 'rgba(139,92,246,0.12)', color: 'var(--accent-pink)', border: 'rgba(139,92,246,0.25)' },
+  cyan: { bg: 'rgba(16,185,129,0.12)', color: 'var(--accent-cyan)', border: 'rgba(16,185,129,0.25)' },
+  jade: { bg: 'rgba(16,185,129,0.12)', color: 'var(--accent-cyan)', border: 'rgba(16,185,129,0.25)' },
+  amber: { bg: 'rgba(245,158,11,0.12)', color: 'var(--accent-amber)', border: 'rgba(245,158,11,0.25)' },
   green: { bg: 'rgba(74,222,128,0.12)', color: 'var(--success)', border: 'rgba(74,222,128,0.25)' },
   red: { bg: 'rgba(248,113,113,0.12)', color: 'var(--danger)', border: 'rgba(248,113,113,0.25)' },
   neutral: { bg: 'rgba(136,136,170,0.1)', color: 'var(--text-muted)', border: 'rgba(136,136,170,0.2)' },

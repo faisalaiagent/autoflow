@@ -17,7 +17,7 @@ function Toggle({ checked, onChange }: { checked: boolean; onChange: (v: boolean
       style={{
         width: '40px', height: '22px', borderRadius: '11px',
         background: checked ? 'var(--accent)' : 'var(--surface-2)',
-        border: `1px solid ${checked ? 'rgba(124,107,255,0.4)' : 'var(--border-color)'}`,
+        border: `1px solid ${checked ? 'rgba(99,102,241,0.4)' : 'var(--border-color)'}`,
         transition: 'all 0.2s', cursor: 'pointer', padding: '2px', display: 'flex', alignItems: 'center',
       }}
     >
@@ -111,7 +111,7 @@ export default function SettingsPage() {
           <div className="flex items-center justify-between mb-5">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-xl flex items-center justify-center"
-                style={{ background: 'rgba(124,107,255,0.15)', border: '1px solid rgba(124,107,255,0.25)' }}>
+                style={{ background: 'rgba(99,102,241,0.15)', border: '1px solid rgba(99,102,241,0.25)' }}>
                 <Key size={16} style={{ color: 'var(--accent)' }} />
               </div>
               <div>
@@ -129,8 +129,8 @@ export default function SettingsPage() {
                 border: `1px solid ${keyConfigured ? 'rgba(74,222,128,0.25)' : 'rgba(251,191,36,0.25)'}`,
               }}>
               <div className="w-1.5 h-1.5 rounded-full"
-                style={{ background: keyConfigured ? '#4ade80' : '#fbbf24' }} />
-              <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: keyConfigured ? '#4ade80' : '#fbbf24' }}>
+                style={{ background: keyConfigured ? '#10B981' : '#F59E0B' }} />
+              <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: keyConfigured ? '#10B981' : '#F59E0B' }}>
                 {keyConfigured ? 'Active' : 'Not configured'}
               </span>
             </div>
@@ -138,7 +138,7 @@ export default function SettingsPage() {
 
           {/* How to get key */}
           <div className="flex gap-3 mb-5 p-4 rounded-xl"
-            style={{ background: 'rgba(124,107,255,0.06)', border: '1px solid rgba(124,107,255,0.15)' }}>
+            style={{ background: 'rgba(99,102,241,0.06)', border: '1px solid rgba(99,102,241,0.15)' }}>
             <Info size={14} style={{ color: 'var(--accent)', flexShrink: 0, marginTop: '2px' }} />
             <div>
               <p style={{ fontFamily: 'var(--font-syne)', fontWeight: 600, fontSize: '12px', color: 'var(--text)', marginBottom: '6px' }}>
@@ -186,9 +186,9 @@ export default function SettingsPage() {
                 border: `1px solid ${testResult === 'ok' ? 'rgba(74,222,128,0.2)' : 'rgba(248,113,113,0.2)'}`,
               }}>
               {testResult === 'ok'
-                ? <CheckCircle2 size={14} style={{ color: '#4ade80' }} />
-                : <AlertTriangle size={14} style={{ color: '#f87171' }} />}
-              <span style={{ fontFamily: 'var(--font-instrument)', fontSize: '13px', color: testResult === 'ok' ? '#4ade80' : '#f87171' }}>
+                ? <CheckCircle2 size={14} style={{ color: '#10B981' }} />
+                : <AlertTriangle size={14} style={{ color: '#EF4444' }} />}
+              <span style={{ fontFamily: 'var(--font-instrument)', fontSize: '13px', color: testResult === 'ok' ? '#10B981' : '#EF4444' }}>
                 {testResult === 'ok' ? 'API key is valid and working! All agents are ready.' : 'API key test failed. Please check your key.'}
               </span>
             </div>
@@ -205,11 +205,11 @@ export default function SettingsPage() {
               style={{
                 background: saved ? 'rgba(74,222,128,0.15)' : 'var(--accent)',
                 border: saved ? '1px solid rgba(74,222,128,0.3)' : 'none',
-                color: saved ? '#4ade80' : 'white',
+                color: saved ? '#10B981' : 'white',
                 fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '13px',
                 cursor: saving ? 'default' : 'pointer',
                 opacity: saving ? 0.7 : 1,
-                boxShadow: saved ? 'none' : '0 4px 20px rgba(124,107,255,0.35)',
+                boxShadow: saved ? 'none' : '0 4px 20px rgba(99,102,241,0.35)',
                 transition: 'all 0.2s',
               }}
             >
@@ -243,7 +243,7 @@ export default function SettingsPage() {
         <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 }} style={sec}>
           <div className="flex items-center gap-3 mb-4">
             <div className="w-9 h-9 rounded-xl flex items-center justify-center"
-              style={{ background: 'rgba(107,255,204,0.15)', border: '1px solid rgba(107,255,204,0.25)' }}>
+              style={{ background: 'rgba(16,185,129,0.15)', border: '1px solid rgba(16,185,129,0.25)' }}>
               <Zap size={16} style={{ color: 'var(--accent-cyan)' }} />
             </div>
             <div>
@@ -253,10 +253,10 @@ export default function SettingsPage() {
           </div>
 
           <div className="flex items-center justify-between px-4 py-3 rounded-xl mb-4"
-            style={{ background: 'rgba(107,255,204,0.05)', border: '1px solid rgba(107,255,204,0.15)' }}>
+            style={{ background: 'rgba(16,185,129,0.05)', border: '1px solid rgba(16,185,129,0.15)' }}>
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 rounded-full animate-pulse"
-                style={{ background: keyConfigured ? 'var(--accent-cyan)' : '#fbbf24' }} />
+                style={{ background: keyConfigured ? 'var(--accent-cyan)' : '#F59E0B' }} />
               <div>
                 <p style={{ fontFamily: 'var(--font-syne)', fontWeight: 600, fontSize: '13px', color: 'var(--text)' }}>
                   LLaMA 3.3 70B
@@ -270,7 +270,7 @@ export default function SettingsPage() {
               style={{
                 fontFamily: 'var(--font-dm-mono)', fontSize: '10px',
                 background: keyConfigured ? 'rgba(74,222,128,0.1)' : 'rgba(251,191,36,0.1)',
-                color: keyConfigured ? '#4ade80' : '#fbbf24',
+                color: keyConfigured ? '#10B981' : '#F59E0B',
                 border: `1px solid ${keyConfigured ? 'rgba(74,222,128,0.2)' : 'rgba(251,191,36,0.2)'}`,
               }}>
               {keyConfigured ? '● Active' : '○ No Key'}
@@ -297,7 +297,7 @@ export default function SettingsPage() {
         <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} style={sec}>
           <div className="flex items-center gap-3 mb-4">
             <div className="w-9 h-9 rounded-xl flex items-center justify-center"
-              style={{ background: 'rgba(255,184,107,0.15)', border: '1px solid rgba(255,184,107,0.25)' }}>
+              style={{ background: 'rgba(245,158,11,0.15)', border: '1px solid rgba(245,158,11,0.25)' }}>
               <Bell size={16} style={{ color: 'var(--accent-amber)' }} />
             </div>
             <h2 style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '15px', color: 'var(--text)' }}>Timezone</h2>
@@ -328,10 +328,10 @@ export default function SettingsPage() {
 
           <div className="grid grid-cols-4 gap-3 mb-5">
             {[
-              { label: 'Tasks', count: tasks.length, color: '#6bffcc' },
-              { label: 'Meetings', count: meetings.length, color: '#ff6b9d' },
-              { label: 'Emails', count: emailHistory.length, color: '#7c6bff' },
-              { label: 'Events', count: events.length, color: '#ffb86b' },
+              { label: 'Tasks', count: tasks.length, color: '#10B981' },
+              { label: 'Meetings', count: meetings.length, color: '#8B5CF6' },
+              { label: 'Emails', count: emailHistory.length, color: '#6366F1' },
+              { label: 'Events', count: events.length, color: '#F59E0B' },
             ].map(({ label, count, color }) => (
               <div key={label} className="text-center p-3 rounded-xl"
                 style={{ background: 'var(--surface-2)', border: '1px solid var(--border-color)' }}>

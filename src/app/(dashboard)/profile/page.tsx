@@ -56,10 +56,10 @@ export default function ProfilePage() {
   const set = (key: string, value: string) => setForm(f => ({ ...f, [key]: value }))
 
   const metricCards = [
-    { label: 'Emails Generated', value: stats.emails_processed, color: '#7c6bff' },
-    { label: 'Meetings Analyzed', value: stats.meetings_summarized, color: '#ff6b9d' },
-    { label: 'Tasks Managed', value: stats.tasks_total, color: '#6bffcc' },
-    { label: 'Events Scheduled', value: stats.events_scheduled, color: '#ffb86b' },
+    { label: 'Emails Generated', value: stats.emails_processed, color: '#6366F1' },
+    { label: 'Meetings Analyzed', value: stats.meetings_summarized, color: '#8B5CF6' },
+    { label: 'Tasks Managed', value: stats.tasks_total, color: '#10B981' },
+    { label: 'Events Scheduled', value: stats.events_scheduled, color: '#F59E0B' },
   ]
 
   return (
@@ -77,7 +77,7 @@ export default function ProfilePage() {
           <div className="relative">
             <div
               className="w-20 h-20 rounded-2xl flex items-center justify-center text-2xl font-bold"
-              style={{ background: 'linear-gradient(135deg, var(--accent), var(--accent-pink))', color: 'white', fontFamily: 'var(--font-syne)', boxShadow: '0 8px 24px rgba(124,107,255,0.35)' }}
+              style={{ background: 'linear-gradient(135deg, var(--accent), var(--accent-pink))', color: 'white', fontFamily: 'var(--font-syne)', boxShadow: '0 8px 24px rgba(99,102,241,0.35)' }}
             >
               {form.full_name ? form.full_name.slice(0, 2).toUpperCase() : 'AF'}
             </div>
@@ -97,10 +97,10 @@ export default function ProfilePage() {
               {form.email || 'your@email.com'}
             </p>
             <div className="flex items-center gap-2 mt-2">
-              <div className="px-2 py-0.5 rounded-md" style={{ background: 'rgba(74,222,128,0.1)', border: '1px solid rgba(74,222,128,0.2)', fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: '#4ade80' }}>
+              <div className="px-2 py-0.5 rounded-md" style={{ background: 'rgba(74,222,128,0.1)', border: '1px solid rgba(74,222,128,0.2)', fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: '#10B981' }}>
                 Starter Plan
               </div>
-              <div className="px-2 py-0.5 rounded-md" style={{ background: 'rgba(124,107,255,0.1)', border: '1px solid rgba(124,107,255,0.2)', fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: 'var(--accent)' }}>
+              <div className="px-2 py-0.5 rounded-md" style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.2)', fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: 'var(--accent)' }}>
                 Groq LLaMA 3
               </div>
             </div>
@@ -130,7 +130,7 @@ export default function ProfilePage() {
           style={sectionStyle}
         >
           <div className="flex items-center gap-2 mb-5">
-            <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'rgba(124,107,255,0.12)', border: '1px solid rgba(124,107,255,0.2)' }}>
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'rgba(99,102,241,0.12)', border: '1px solid rgba(99,102,241,0.2)' }}>
               <User size={14} style={{ color: 'var(--accent)' }} />
             </div>
             <h3 style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '14px', color: 'var(--text)' }}>Personal Information</h3>
@@ -256,12 +256,12 @@ export default function ProfilePage() {
             style={{
               background: saved ? 'rgba(74,222,128,0.15)' : 'var(--accent)',
               border: saved ? '1px solid rgba(74,222,128,0.3)' : 'none',
-              color: saved ? '#4ade80' : 'white',
+              color: saved ? '#10B981' : 'white',
               fontFamily: 'var(--font-syne)',
               fontWeight: 700,
               fontSize: '13px',
               cursor: 'pointer',
-              boxShadow: saved ? 'none' : '0 4px 20px rgba(124,107,255,0.35)',
+              boxShadow: saved ? 'none' : '0 4px 20px rgba(99,102,241,0.35)',
               transition: 'all 0.2s',
             }}
           >

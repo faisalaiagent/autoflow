@@ -47,15 +47,15 @@ export default function LoginPage() {
     <div className="min-h-screen bg-[#0a0a0f] flex items-center justify-center px-4">
       {/* Ambient */}
       <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#7c6bff]/8 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#ff6b9d]/6 rounded-full blur-[100px]" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#6366F1]/8 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#8B5CF6]/6 rounded-full blur-[100px]" />
       </div>
 
       <div className="relative z-10 w-full max-w-md">
         {/* Logo */}
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center gap-2 mb-6">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#7c6bff] to-[#ff6b9d] flex items-center justify-center">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] flex items-center justify-center">
               <Zap size={16} className="text-white" />
             </div>
             <span className="font-display font-bold text-xl text-white">AutoFlow</span>
@@ -83,7 +83,7 @@ export default function LoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@example.com"
-                  className="w-full bg-[#1a1a24] border border-[#2a2a3a] text-white rounded-xl pl-10 pr-4 py-3 text-sm focus:outline-none focus:border-[#7c6bff] focus:ring-2 focus:ring-[#7c6bff]/15 transition-all placeholder-[#5555aa]"
+                  className="w-full bg-[#1a1a24] border border-[#2a2a3a] text-white rounded-xl pl-10 pr-4 py-3 text-sm focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/15 transition-all placeholder-[#5555aa]"
                 />
               </div>
             </div>
@@ -97,7 +97,7 @@ export default function LoginPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="w-full bg-[#1a1a24] border border-[#2a2a3a] text-white rounded-xl pl-10 pr-11 py-3 text-sm focus:outline-none focus:border-[#7c6bff] focus:ring-2 focus:ring-[#7c6bff]/15 transition-all placeholder-[#5555aa]"
+                  className="w-full bg-[#1a1a24] border border-[#2a2a3a] text-white rounded-xl pl-10 pr-11 py-3 text-sm focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/15 transition-all placeholder-[#5555aa]"
                 />
                 <button
                   type="button"
@@ -112,7 +112,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full font-display font-bold bg-[#7c6bff] hover:bg-[#9585ff] disabled:opacity-50 disabled:cursor-not-allowed text-white py-3.5 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(124,107,255,0.4)] text-sm"
+              className="w-full font-display font-bold bg-[#6366F1] hover:bg-[#818CF8] disabled:opacity-50 disabled:cursor-not-allowed text-white py-3.5 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(99,102,241,0.4)] text-sm"
             >
               {loading ? 'Signing in…' : 'Sign in'}
             </button>
@@ -127,7 +127,7 @@ export default function LoginPage() {
           <div className="space-y-3">
             <button
               onClick={handleGoogleLogin}
-              className="w-full flex items-center justify-center gap-3 bg-[#1a1a24] border border-[#2a2a3a] hover:border-[#7c6bff]/40 text-white py-3 rounded-xl transition-all text-sm font-medium"
+              className="w-full flex items-center justify-center gap-3 bg-[#1a1a24] border border-[#2a2a3a] hover:border-[#6366F1]/40 text-white py-3 rounded-xl transition-all text-sm font-medium"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24">
                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -140,7 +140,7 @@ export default function LoginPage() {
 
             <button
               onClick={handleDemoLogin}
-              className="w-full flex items-center justify-center gap-2 bg-[#7c6bff]/10 border border-[#7c6bff]/30 hover:bg-[#7c6bff]/20 text-[#7c6bff] py-3 rounded-xl transition-all text-sm font-display font-bold"
+              className="w-full flex items-center justify-center gap-2 bg-[#6366F1]/10 border border-[#6366F1]/30 hover:bg-[#6366F1]/20 text-[#6366F1] py-3 rounded-xl transition-all text-sm font-display font-bold"
             >
               <Zap size={14} />
               Try demo (no account needed)
@@ -150,7 +150,7 @@ export default function LoginPage() {
 
         <p className="text-center text-sm text-[#8888aa] mt-6">
           Don't have an account?{' '}
-          <Link href="/signup" className="text-[#7c6bff] hover:text-[#9585ff] transition-colors font-medium">
+          <Link href="/signup" className="text-[#6366F1] hover:text-[#818CF8] transition-colors font-medium">
             Sign up free
           </Link>
         </p>

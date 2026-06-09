@@ -30,9 +30,9 @@ export function truncate(str: string, length = 80): string {
 
 export function priorityColor(priority: string): string {
   const map: Record<string, string> = {
-    high: '#f87171',
-    medium: '#ffb86b',
-    low: '#6bffcc',
+    high: '#EF4444',
+    medium: '#F59E0B',
+    low: '#10B981',
   };
 
   return map[priority.toLowerCase()] ?? '#8888aa';
@@ -40,9 +40,9 @@ export function priorityColor(priority: string): string {
 
 export function sentimentColor(sentiment: string): string {
   const map: Record<string, string> = {
-    positive: '#4ade80',
+    positive: '#10B981',
     neutral: '#8888aa',
-    negative: '#f87171',
+    negative: '#EF4444',
   };
 
   return map[sentiment.toLowerCase()] ?? '#8888aa';
@@ -54,9 +54,9 @@ export function getStatusColor(status?: string): string {
   const normalizedStatus = status.trim().toLowerCase();
 
   const map: Record<string, string> = {
-    pending: '#fbbf24',
-    in_progress: '#7c6bff',
-    completed: '#4ade80',
+    pending: '#F59E0B',
+    in_progress: '#6366F1',
+    completed: '#10B981',
     failed: '#ef4444',
     cancelled: '#9ca3af',
   };

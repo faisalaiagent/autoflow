@@ -53,7 +53,7 @@ export default function ContactPage() {
       {/* Nav */}
       <nav className="flex items-center justify-between px-6 py-4 border-b" style={{ borderColor: 'var(--border-color)', background: 'rgba(8,8,16,0.95)', backdropFilter: 'blur(20px)', position: 'sticky', top: 0, zIndex: 50 }}>
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #7c6bff, #ff6b9d)' }}>
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #6366F1, #8B5CF6)' }}>
             <Zap size={15} color="white" fill="white" />
           </div>
           <span style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: '16px', color: 'var(--text)' }}>AutoFlow AI</span>
@@ -67,7 +67,7 @@ export default function ContactPage() {
 
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: 'rgba(124,107,255,0.1)', border: '1px solid rgba(124,107,255,0.2)' }}>
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.2)' }}>
             <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '11px', color: 'var(--accent)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Contact</span>
           </div>
           <h1 style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: 'clamp(1.8rem, 5vw, 2.8rem)', color: 'var(--text)', lineHeight: 1.1, marginBottom: '12px' }}>Get in Touch</h1>
@@ -80,7 +80,7 @@ export default function ContactPage() {
         <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 }}
           className="flex flex-col sm:flex-row gap-4 mb-8">
           <div className="flex items-center gap-3 px-4 py-3 rounded-xl flex-1" style={{ background: 'var(--surface)', border: '1px solid var(--border-color)' }}>
-            <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(124,107,255,0.15)' }}>
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(99,102,241,0.15)' }}>
               <Mail size={15} style={{ color: 'var(--accent)' }} />
             </div>
             <div>
@@ -91,7 +91,7 @@ export default function ContactPage() {
             </div>
           </div>
           <div className="flex items-center gap-3 px-4 py-3 rounded-xl flex-1" style={{ background: 'var(--surface)', border: '1px solid var(--border-color)' }}>
-            <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(107,255,204,0.12)' }}>
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(16,185,129,0.12)' }}>
               <MessageSquare size={15} style={{ color: 'var(--accent-cyan)' }} />
             </div>
             <div>
@@ -104,8 +104,8 @@ export default function ContactPage() {
         {/* Form / Success */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
           {sent ? (
-            <div className="text-center py-16 px-8 rounded-2xl" style={{ background: 'rgba(107,255,204,0.06)', border: '1px solid rgba(107,255,204,0.2)' }}>
-              <CheckCircle2 size={48} style={{ color: '#6bffcc', margin: '0 auto 16px' }} />
+            <div className="text-center py-16 px-8 rounded-2xl" style={{ background: 'rgba(16,185,129,0.06)', border: '1px solid rgba(16,185,129,0.2)' }}>
+              <CheckCircle2 size={48} style={{ color: '#10B981', margin: '0 auto 16px' }} />
               <h2 style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '20px', color: 'var(--text)', marginBottom: '8px' }}>Message Sent!</h2>
               <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '14px', color: 'var(--text-muted)', marginBottom: '6px' }}>
                 Thank you for reaching out. Your message has been delivered to Shah Faisal at
@@ -123,7 +123,7 @@ export default function ContactPage() {
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5 p-6 rounded-2xl" style={{ background: 'var(--surface)', border: '1px solid var(--border-color)' }}>
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: 'rgba(124,107,255,0.15)' }}>
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: 'rgba(99,102,241,0.15)' }}>
                   <Mail size={18} style={{ color: 'var(--accent)' }} />
                 </div>
                 <div>
@@ -154,12 +154,12 @@ export default function ContactPage() {
               </div>
 
               {error && (
-                <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '13px', color: '#f87171', padding: '10px', background: 'rgba(248,113,113,0.08)', borderRadius: '8px', border: '1px solid rgba(248,113,113,0.2)' }}>
+                <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '13px', color: '#EF4444', padding: '10px', background: 'rgba(248,113,113,0.08)', borderRadius: '8px', border: '1px solid rgba(248,113,113,0.2)' }}>
                   {error}
                 </p>
               )}
 
-              <button type="submit" disabled={sending} className="w-full flex items-center justify-center gap-2 py-3 rounded-xl" style={{ background: 'var(--accent)', color: 'white', fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '14px', cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1, border: 'none', boxShadow: '0 4px 20px rgba(124,107,255,0.35)' }}>
+              <button type="submit" disabled={sending} className="w-full flex items-center justify-center gap-2 py-3 rounded-xl" style={{ background: 'var(--accent)', color: 'white', fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '14px', cursor: sending ? 'default' : 'pointer', opacity: sending ? 0.7 : 1, border: 'none', boxShadow: '0 4px 20px rgba(99,102,241,0.35)' }}>
                 <Send size={15} />
                 {sending ? 'Sending...' : 'Send Message'}
               </button>

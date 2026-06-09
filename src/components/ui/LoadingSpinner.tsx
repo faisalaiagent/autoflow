@@ -10,7 +10,7 @@ export function LoadingSpinner({ message = 'Processing…', size = 18 }: Loading
     <div className="flex items-center justify-center gap-3 py-8">
       <div
         className="w-8 h-8 rounded-full flex items-center justify-center"
-        style={{ background: 'rgba(124,107,255,0.12)', border: '1px solid rgba(124,107,255,0.2)' }}
+        style={{ background: 'rgba(99,102,241,0.12)', border: '1px solid rgba(99,102,241,0.2)' }}
       >
         <Loader2 size={size} className="animate-spin" style={{ color: 'var(--accent)' }} />
       </div>

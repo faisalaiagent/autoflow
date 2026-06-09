@@ -35,7 +35,7 @@ export default function MeetingBlogPost() {
         style={{ borderColor: 'var(--border-color)', background: 'rgba(8,8,16,0.95)', backdropFilter: 'blur(20px)', position: 'sticky', top: 0, zIndex: 50 }}
       >
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #7c6bff, #ff6b9d)' }}>
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #6366F1, #8B5CF6)' }}>
             <Zap size={15} color="white" fill="white" />
           </div>
           <span style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: '16px', color: 'var(--text)' }}>AutoFlow AI</span>
@@ -52,13 +52,13 @@ export default function MeetingBlogPost() {
       </nav>
 
       {/* Hero */}
-      <div style={{ background: 'linear-gradient(180deg, rgba(255,107,157,0.08) 0%, transparent 100%)', borderBottom: '1px solid var(--border-color)', padding: '48px 24px 40px' }}>
+      <div style={{ background: 'linear-gradient(180deg, rgba(139,92,246,0.08) 0%, transparent 100%)', borderBottom: '1px solid var(--border-color)', padding: '48px 24px 40px' }}>
         <div className="max-w-3xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <div className="flex items-center gap-3 mb-5 flex-wrap">
               <span
                 className="px-3 py-1 rounded-full"
-                style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: '#ff6b9d', background: 'rgba(255,107,157,0.1)', border: '1px solid rgba(255,107,157,0.2)', letterSpacing: '0.08em', textTransform: 'uppercase' }}
+                style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: '#8B5CF6', background: 'rgba(139,92,246,0.1)', border: '1px solid rgba(139,92,246,0.2)', letterSpacing: '0.08em', textTransform: 'uppercase' }}
               >
                 Meeting Productivity
               </span>
@@ -80,7 +80,7 @@ export default function MeetingBlogPost() {
             <div className="flex items-center gap-3">
               <div
                 className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0"
-                style={{ background: 'linear-gradient(135deg, #7c6bff, #ff6b9d)', color: 'white', fontFamily: 'var(--font-syne)' }}
+                style={{ background: 'linear-gradient(135deg, #6366F1, #8B5CF6)', color: 'white', fontFamily: 'var(--font-syne)' }}
               >
                 SF
               </div>
@@ -110,8 +110,8 @@ export default function MeetingBlogPost() {
           <P>A meeting is a compressed moment of shared understanding. Everyone in the room is aligned, at least temporarily. Decisions are in the air. Context is shared. Energy is present. Then the meeting ends and everyone goes back to their individual inboxes and task lists and the shared understanding starts to dissolve almost immediately.</P>
 
           {/* Pull quote */}
-          <div className="my-8 p-6 rounded-2xl flex gap-4" style={{ background: 'rgba(255,107,157,0.06)', border: '1px solid rgba(255,107,157,0.2)' }}>
-            <Quote size={20} style={{ color: '#ff6b9d', flexShrink: 0, marginTop: '2px' }} />
+          <div className="my-8 p-6 rounded-2xl flex gap-4" style={{ background: 'rgba(139,92,246,0.06)', border: '1px solid rgba(139,92,246,0.2)' }}>
+            <Quote size={20} style={{ color: '#8B5CF6', flexShrink: 0, marginTop: '2px' }} />
             <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '16px', color: 'var(--text)', lineHeight: 1.75, margin: 0, fontStyle: 'italic' }}>
               A meeting without a proper summary is like a contract nobody signed. Everyone agreed to something, but there is no record of what, by when, or who was responsible.
             </p>
@@ -126,11 +126,11 @@ export default function MeetingBlogPost() {
 
           <div className="space-y-4 my-6">
             {[
-              { icon: FileText, color: '#7c6bff', title: 'An executive summary', desc: 'Two or three sentences that tell someone who was not in the meeting what the meeting was about and what the main outcome was. Not a detailed account — just enough that someone can understand at a glance whether this is relevant to them.' },
-              { icon: ListChecks, color: '#6bffcc', title: 'Action items with owners and deadlines', desc: 'Not "team to discuss pricing." Specifically who is doing what by when. This is the most important part of any meeting record and it is almost always the least well-documented part.' },
-              { icon: Brain, color: '#ff6b9d', title: 'Decisions made', desc: 'A clean list of what was actually decided. Not what was discussed — what was resolved. These are the things that should not come up again in the next meeting as if they were still open.' },
-              { icon: Users, color: '#ffb86b', title: 'Key topics covered', desc: 'A brief list of the main subjects discussed, which serves both as context for the summary and as a quick reference for people who need to know whether a particular topic was addressed.' },
-              { icon: Mic, color: '#ff6b9d', title: 'Next meeting agenda items', desc: 'What needs to be carried forward? What unresolved questions need time in the next session? Capturing this at the end of the meeting, while context is still fresh, saves significant preparation time later.' },
+              { icon: FileText, color: '#6366F1', title: 'An executive summary', desc: 'Two or three sentences that tell someone who was not in the meeting what the meeting was about and what the main outcome was. Not a detailed account — just enough that someone can understand at a glance whether this is relevant to them.' },
+              { icon: ListChecks, color: '#10B981', title: 'Action items with owners and deadlines', desc: 'Not "team to discuss pricing." Specifically who is doing what by when. This is the most important part of any meeting record and it is almost always the least well-documented part.' },
+              { icon: Brain, color: '#8B5CF6', title: 'Decisions made', desc: 'A clean list of what was actually decided. Not what was discussed — what was resolved. These are the things that should not come up again in the next meeting as if they were still open.' },
+              { icon: Users, color: '#F59E0B', title: 'Key topics covered', desc: 'A brief list of the main subjects discussed, which serves both as context for the summary and as a quick reference for people who need to know whether a particular topic was addressed.' },
+              { icon: Mic, color: '#8B5CF6', title: 'Next meeting agenda items', desc: 'What needs to be carried forward? What unresolved questions need time in the next session? Capturing this at the end of the meeting, while context is still fresh, saves significant preparation time later.' },
             ].map(({ icon: Icon, color, title, desc }) => (
               <div key={title} className="flex gap-4 p-5 rounded-2xl" style={{ background: 'var(--surface)', border: '1px solid var(--border-color)' }}>
                 <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: `${color}15` }}>
@@ -165,10 +165,10 @@ export default function MeetingBlogPost() {
 
           <div className="space-y-3 my-6">
             {[
-              { num: '01', color: '#6bffcc', title: 'Follow-through actually happens', desc: 'When action items are specific, named, and documented within minutes of a meeting ending, the probability of them being completed goes up substantially. People remember what they committed to. There is a written record if they forget. Accountability becomes structural rather than relying on everyone\'s memory.' },
-              { num: '02', color: '#7c6bff', title: 'Fewer repeat meetings', desc: 'One of the most common reasons teams call follow-up meetings is that the original meeting produced no written record, so two weeks later nobody is sure what was decided. A good summary eliminates this problem. The decision is documented. The rationale is preserved. There is nothing to relitigate.' },
-              { num: '03', color: '#ff6b9d', title: 'Absent team members can catch up properly', desc: 'When someone misses a meeting, a good summary gives them the actual substance — not just "we talked about some stuff, catch up with someone." They know what was decided, what they need to do, and what context they need to engage in the next conversation.' },
-              { num: '04', color: '#ffb86b', title: 'Meeting preparation gets better', desc: 'When your previous meeting summary includes a "next agenda items" section, the next meeting has a ready starting point. You are not scrambling to remember what needed to be carried forward. The meeting structure builds on itself rather than starting from scratch each time.' },
+              { num: '01', color: '#10B981', title: 'Follow-through actually happens', desc: 'When action items are specific, named, and documented within minutes of a meeting ending, the probability of them being completed goes up substantially. People remember what they committed to. There is a written record if they forget. Accountability becomes structural rather than relying on everyone\'s memory.' },
+              { num: '02', color: '#6366F1', title: 'Fewer repeat meetings', desc: 'One of the most common reasons teams call follow-up meetings is that the original meeting produced no written record, so two weeks later nobody is sure what was decided. A good summary eliminates this problem. The decision is documented. The rationale is preserved. There is nothing to relitigate.' },
+              { num: '03', color: '#8B5CF6', title: 'Absent team members can catch up properly', desc: 'When someone misses a meeting, a good summary gives them the actual substance — not just "we talked about some stuff, catch up with someone." They know what was decided, what they need to do, and what context they need to engage in the next conversation.' },
+              { num: '04', color: '#F59E0B', title: 'Meeting preparation gets better', desc: 'When your previous meeting summary includes a "next agenda items" section, the next meeting has a ready starting point. You are not scrambling to remember what needed to be carried forward. The meeting structure builds on itself rather than starting from scratch each time.' },
             ].map(({ num, color, title, desc }) => (
               <div key={num} className="flex gap-4 p-5 rounded-2xl" style={{ background: 'var(--surface)', border: '1px solid var(--border-color)' }}>
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 text-xs font-bold" style={{ background: `${color}15`, color, fontFamily: 'var(--font-dm-mono)', border: `1px solid ${color}25` }}>
@@ -209,9 +209,9 @@ export default function MeetingBlogPost() {
               { title: 'Interpersonal or political subtext', desc: 'The AI reads what was said, not what was meant. If your meeting had significant subtext — tension between stakeholders, unspoken disagreements, things left diplomatically unsaid — the summary will reflect the surface of the conversation, not its undercurrents. That contextual layer is yours to add.' },
             ].map(({ title, desc }) => (
               <div key={title} className="flex gap-3 p-4 rounded-xl" style={{ background: 'rgba(248,113,113,0.05)', border: '1px solid rgba(248,113,113,0.15)' }}>
-                <AlertCircle size={15} style={{ color: '#f87171', flexShrink: 0, marginTop: '2px' }} />
+                <AlertCircle size={15} style={{ color: '#EF4444', flexShrink: 0, marginTop: '2px' }} />
                 <div>
-                  <p style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '13px', color: '#f87171', marginBottom: '3px' }}>{title}</p>
+                  <p style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '13px', color: '#EF4444', marginBottom: '3px' }}>{title}</p>
                   <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '13px', color: 'var(--text-muted)', lineHeight: 1.65, margin: 0 }}>{desc}</p>
                 </div>
               </div>
@@ -226,8 +226,8 @@ export default function MeetingBlogPost() {
           <P>When everyone knows that a clear summary will exist within minutes of the meeting ending, the energy in the room is different. Commitments feel more real because they will be documented. Decisions feel more final because there will be a written record. People speak more precisely about who is responsible for what and by when, because they know those details will be captured and shared.</P>
 
           {/* Insight callout */}
-          <div className="my-8 p-6 rounded-2xl flex gap-4" style={{ background: 'rgba(107,255,204,0.06)', border: '1px solid rgba(107,255,204,0.2)' }}>
-            <Lightbulb size={20} style={{ color: '#6bffcc', flexShrink: 0, marginTop: '2px' }} />
+          <div className="my-8 p-6 rounded-2xl flex gap-4" style={{ background: 'rgba(16,185,129,0.06)', border: '1px solid rgba(16,185,129,0.2)' }}>
+            <Lightbulb size={20} style={{ color: '#10B981', flexShrink: 0, marginTop: '2px' }} />
             <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '16px', color: 'var(--text)', lineHeight: 1.75, margin: 0 }}>
               Documentation does not just record what happened in a meeting. It changes what happens in the meeting. When people know their words will be captured precisely, they choose those words more carefully.
             </p>
@@ -246,10 +246,10 @@ export default function MeetingBlogPost() {
           <P>The AutoFlow AI meeting summary agent is free to use with your own Groq API key. You can try it right now with the transcript or notes from any meeting you had this week. Paste them in, see what comes back, and share that with your team. The difference it makes is immediate and obvious.</P>
 
           {/* CTA card */}
-          <div className="mt-12 p-8 rounded-2xl text-center relative overflow-hidden" style={{ background: 'rgba(255,107,157,0.06)', border: '1px solid rgba(255,107,157,0.2)' }}>
-            <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(255,107,157,0.5), transparent)' }} />
-            <div className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ background: 'rgba(255,107,157,0.12)', border: '1px solid rgba(255,107,157,0.2)' }}>
-              <Mic size={20} style={{ color: '#ff6b9d' }} />
+          <div className="mt-12 p-8 rounded-2xl text-center relative overflow-hidden" style={{ background: 'rgba(139,92,246,0.06)', border: '1px solid rgba(139,92,246,0.2)' }}>
+            <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(139,92,246,0.5), transparent)' }} />
+            <div className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ background: 'rgba(139,92,246,0.12)', border: '1px solid rgba(139,92,246,0.2)' }}>
+              <Mic size={20} style={{ color: '#8B5CF6' }} />
             </div>
             <h3 style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: '20px', color: 'var(--text)', marginBottom: '10px' }}>
               Try the Meeting Summary Agent Free
@@ -259,7 +259,7 @@ export default function MeetingBlogPost() {
             </p>
             <Link
               href="/dashboard/meeting"
-              style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#ff6b9d', color: 'white', padding: '12px 28px', borderRadius: '12px', fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '14px', boxShadow: '0 4px 20px rgba(255,107,157,0.3)' }}
+              style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#8B5CF6', color: 'white', padding: '12px 28px', borderRadius: '12px', fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '14px', boxShadow: '0 4px 20px rgba(139,92,246,0.3)' }}
             >
               <Mic size={15} />
               Open Meeting Agent

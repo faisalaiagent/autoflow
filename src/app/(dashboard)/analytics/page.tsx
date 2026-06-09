@@ -9,12 +9,12 @@ import {
 import { Zap, Target, Mic, Calendar, TrendingUp, CheckSquare, Award, Mail } from 'lucide-react'
 import { useMemo } from 'react'
 
-const COLORS = { email: '#7c6bff', meeting: '#ff6b9d', task: '#6bffcc', calendar: '#ffb86b' }
+const COLORS = { email: '#6366F1', meeting: '#8B5CF6', task: '#10B981', calendar: '#F59E0B' }
 
 const CustomTooltip = ({ active, payload, label }: any) => {
   if (!active || !payload?.length) return null
   return (
-    <div style={{ background: 'rgba(22,22,37,0.95)', border: '1px solid rgba(124,107,255,0.25)', backdropFilter: 'blur(12px)', borderRadius: '10px', padding: '8px 12px' }}>
+    <div style={{ background: 'rgba(22,22,37,0.95)', border: '1px solid rgba(99,102,241,0.25)', backdropFilter: 'blur(12px)', borderRadius: '10px', padding: '8px 12px' }}>
       {label && <p style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: 'var(--text-muted)', marginBottom: '4px' }}>{label}</p>}
       {payload.map((entry: any, i: number) => (
         <p key={i} style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '13px', color: entry.color }}>{entry.name}: {entry.value}</p>
@@ -40,25 +40,25 @@ export default function AnalyticsPage() {
   ]
 
   const taskStatusData = [
-    { name: 'Completed', value: completedTasks, fill: '#4ade80' },
-    { name: 'In Progress', value: inProgressTasks, fill: '#7c6bff' },
-    { name: 'Pending', value: pendingTasks, fill: '#fbbf24' },
+    { name: 'Completed', value: completedTasks, fill: '#10B981' },
+    { name: 'In Progress', value: inProgressTasks, fill: '#6366F1' },
+    { name: 'Pending', value: pendingTasks, fill: '#F59E0B' },
   ]
 
   const sentimentData = useMemo(() => {
     const counts = { positive: 0, neutral: 0, negative: 0 }
     meetings.forEach(m => { if (m.sentiment in counts) counts[m.sentiment as keyof typeof counts]++ })
     return [
-      { name: 'Positive', value: counts.positive, fill: '#4ade80' },
+      { name: 'Positive', value: counts.positive, fill: '#10B981' },
       { name: 'Neutral', value: counts.neutral, fill: '#8888aa' },
-      { name: 'Negative', value: counts.negative, fill: '#f87171' },
+      { name: 'Negative', value: counts.negative, fill: '#EF4444' },
     ]
   }, [meetings])
 
   const tasksByPriority = [
-    { name: 'High', value: tasks.filter(t => t.priority === 'high').length, fill: '#f87171' },
-    { name: 'Medium', value: tasks.filter(t => t.priority === 'medium').length, fill: '#ffb86b' },
-    { name: 'Low', value: tasks.filter(t => t.priority === 'low').length, fill: '#6bffcc' },
+    { name: 'High', value: tasks.filter(t => t.priority === 'high').length, fill: '#EF4444' },
+    { name: 'Medium', value: tasks.filter(t => t.priority === 'medium').length, fill: '#F59E0B' },
+    { name: 'Low', value: tasks.filter(t => t.priority === 'low').length, fill: '#10B981' },
   ]
 
   const weeklyData = useMemo(() => {
@@ -78,10 +78,10 @@ export default function AnalyticsPage() {
         {/* KPIs */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { label: 'Total AI Actions', value: totalActions, icon: Zap, color: '#7c6bff', bg: 'rgba(124,107,255,0.12)' },
-            { label: 'Task Completion', value: `${completionRate}%`, icon: Target, color: '#6bffcc', bg: 'rgba(107,255,204,0.12)' },
-            { label: 'Meetings Analyzed', value: meetings.length, icon: Mic, color: '#ff6b9d', bg: 'rgba(255,107,157,0.12)' },
-            { label: 'Events Scheduled', value: events.length, icon: Calendar, color: '#ffb86b', bg: 'rgba(255,184,107,0.12)' },
+            { label: 'Total AI Actions', value: totalActions, icon: Zap, color: '#6366F1', bg: 'rgba(99,102,241,0.12)' },
+            { label: 'Task Completion', value: `${completionRate}%`, icon: Target, color: '#10B981', bg: 'rgba(16,185,129,0.12)' },
+            { label: 'Meetings Analyzed', value: meetings.length, icon: Mic, color: '#8B5CF6', bg: 'rgba(139,92,246,0.12)' },
+            { label: 'Events Scheduled', value: events.length, icon: Calendar, color: '#F59E0B', bg: 'rgba(245,158,11,0.12)' },
           ].map((kpi, i) => {
             const Icon = kpi.icon
             return (
@@ -197,8 +197,8 @@ export default function AnalyticsPage() {
             <div className="flex items-center gap-2 mb-2"><Target size={14} style={{ color: 'var(--accent-cyan)' }} /><h3 style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '13px', color: 'var(--text)' }}>Completion Rate</h3></div>
             <div className="relative flex items-center justify-center" style={{ height: '160px', width: '100%' }}>
               <ResponsiveContainer width="100%" height={160}>
-                <RadialBarChart cx="50%" cy="50%" innerRadius="55%" outerRadius="80%" data={[{ value: completionRate, fill: '#6bffcc' }]} startAngle={90} endAngle={90 - (completionRate / 100) * 360}>
-                  <RadialBar dataKey="value" fill="#6bffcc" background={{ fill: 'rgba(107,255,204,0.08)' }} />
+                <RadialBarChart cx="50%" cy="50%" innerRadius="55%" outerRadius="80%" data={[{ value: completionRate, fill: '#10B981' }]} startAngle={90} endAngle={90 - (completionRate / 100) * 360}>
+                  <RadialBar dataKey="value" fill="#10B981" background={{ fill: 'rgba(16,185,129,0.08)' }} />
                 </RadialBarChart>
               </ResponsiveContainer>
               <div className="absolute flex flex-col items-center">
@@ -207,7 +207,7 @@ export default function AnalyticsPage() {
               </div>
             </div>
             <div className="grid grid-cols-3 gap-2 mt-2">
-              {[{ label: 'Done', value: completedTasks, color: '#4ade80' }, { label: 'Active', value: inProgressTasks, color: '#7c6bff' }, { label: 'Queued', value: pendingTasks, color: '#fbbf24' }].map(({ label, value, color }) => (
+              {[{ label: 'Done', value: completedTasks, color: '#10B981' }, { label: 'Active', value: inProgressTasks, color: '#6366F1' }, { label: 'Queued', value: pendingTasks, color: '#F59E0B' }].map(({ label, value, color }) => (
                 <div key={label} className="text-center px-2 py-1.5 rounded-lg" style={{ background: 'var(--surface-2)', border: '1px solid var(--border-color)' }}>
                   <div style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '16px', color }}>{value}</div>
                   <div style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '9px', color: 'var(--text-subtle)', textTransform: 'uppercase' }}>{label}</div>

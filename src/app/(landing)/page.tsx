@@ -13,9 +13,9 @@ import {
 const agents = [
   {
     icon: Mail,
-    color: '#7c6bff',
-    bg: 'rgba(124,107,255,0.1)',
-    border: 'rgba(124,107,255,0.2)',
+    color: '#6366F1',
+    bg: 'rgba(99,102,241,0.1)',
+    border: 'rgba(99,102,241,0.2)',
     label: 'Email Reply Bot',
     badge: 'Agent 01',
     desc: 'Reads incoming emails and generates polished, context-aware replies with intelligent tone control  -  professional, friendly, formal, or empathetic.',
@@ -23,9 +23,9 @@ const agents = [
   },
   {
     icon: Mic,
-    color: '#ff6b9d',
-    bg: 'rgba(255,107,157,0.1)',
-    border: 'rgba(255,107,157,0.2)',
+    color: '#8B5CF6',
+    bg: 'rgba(139,92,246,0.1)',
+    border: 'rgba(139,92,246,0.2)',
     label: 'Meeting Summary Bot',
     badge: 'Agent 02',
     desc: 'Transforms raw meeting transcripts into structured intelligence  -  summaries, action items, decisions, and the next meeting agenda in seconds.',
@@ -33,9 +33,9 @@ const agents = [
   },
   {
     icon: CheckSquare,
-    color: '#6bffcc',
-    bg: 'rgba(107,255,204,0.1)',
-    border: 'rgba(107,255,204,0.2)',
+    color: '#10B981',
+    bg: 'rgba(16,185,129,0.1)',
+    border: 'rgba(16,185,129,0.2)',
     label: 'Task Manager Agent',
     badge: 'Agent 03',
     desc: 'Speak to your task list in plain English. Create, prioritize, complete, and analyze tasks using natural language commands powered by Groq AI.',
@@ -43,9 +43,9 @@ const agents = [
   },
   {
     icon: Calendar,
-    color: '#ffb86b',
-    bg: 'rgba(255,184,107,0.1)',
-    border: 'rgba(255,184,107,0.2)',
+    color: '#F59E0B',
+    bg: 'rgba(245,158,11,0.1)',
+    border: 'rgba(245,158,11,0.2)',
     label: 'Calendar Assistant',
     badge: 'Agent 04',
     desc: 'Schedule, reschedule, and manage events with conversational AI. Conflict detection, smart suggestions, and calendar optimization built-in.',
@@ -91,7 +91,7 @@ const pricing = [
     name: 'Pro',
     price: '$19',
     sub: '/month',
-    color: '#7c6bff',
+    color: '#6366F1',
     highlight: true,
     features: [
       { text: 'All 4 AI agents', included: true },
@@ -107,7 +107,7 @@ const pricing = [
     name: 'Team',
     price: '$49',
     sub: '/month',
-    color: '#6bffcc',
+    color: '#10B981',
     features: [
       { text: 'Everything in Pro', included: true },
       { text: 'Unlimited team seats', included: true },
@@ -164,13 +164,13 @@ function NavBar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #7c6bff, #ff6b9d)' }}>
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #6366F1, #8B5CF6)' }}>
             <Zap size={14} className="text-white" fill="white" />
           </div>
           <span style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: '17px', color: 'var(--text)' }}>
             AutoFlow
           </span>
-          <span className="hidden md:block px-2 py-0.5 rounded-md" style={{ background: 'rgba(124,107,255,0.15)', border: '1px solid rgba(124,107,255,0.3)', fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: 'var(--accent)', letterSpacing: '0.06em' }}>
+          <span className="hidden md:block px-2 py-0.5 rounded-md" style={{ background: 'rgba(99,102,241,0.15)', border: '1px solid rgba(99,102,241,0.3)', fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: 'var(--accent)', letterSpacing: '0.06em' }}>
             AI
           </span>
         </div>
@@ -214,7 +214,7 @@ function NavBar() {
               fontWeight: 700,
               fontSize: '13px',
               textDecoration: 'none',
-              boxShadow: '0 4px 20px rgba(124,107,255,0.4)',
+              boxShadow: '0 4px 20px rgba(99,102,241,0.4)',
             }}
           >
             Try Free App <ArrowRight size={13} />
@@ -264,9 +264,9 @@ export default function LandingPage() {
 
       {/* Ambient gradients */}
       <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 0 }}>
-        <div style={{ position: 'absolute', top: '-10%', left: '20%', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(124,107,255,0.08), transparent 70%)', borderRadius: '50%' }} />
-        <div style={{ position: 'absolute', bottom: '10%', right: '10%', width: '500px', height: '500px', background: 'radial-gradient(circle, rgba(255,107,157,0.06), transparent 70%)', borderRadius: '50%' }} />
-        <div style={{ position: 'absolute', top: '50%', left: '50%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(107,255,204,0.04), transparent 70%)', borderRadius: '50%', transform: 'translate(-50%,-50%)' }} />
+        <div style={{ position: 'absolute', top: '-10%', left: '20%', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(99,102,241,0.08), transparent 70%)', borderRadius: '50%' }} />
+        <div style={{ position: 'absolute', bottom: '10%', right: '10%', width: '500px', height: '500px', background: 'radial-gradient(circle, rgba(139,92,246,0.06), transparent 70%)', borderRadius: '50%' }} />
+        <div style={{ position: 'absolute', top: '50%', left: '50%', width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(16,185,129,0.04), transparent 70%)', borderRadius: '50%', transform: 'translate(-50%,-50%)' }} />
         {/* Dot grid */}
         <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
       </div>
@@ -285,7 +285,7 @@ export default function LandingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8"
-            style={{ background: 'rgba(124,107,255,0.1)', border: '1px solid rgba(124,107,255,0.25)' }}
+            style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.25)' }}
           >
             <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: 'var(--accent-cyan)' }} />
             <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '12px', color: 'var(--accent)', letterSpacing: '0.08em' }}>
@@ -311,7 +311,7 @@ export default function LandingPage() {
             <span style={{ color: 'var(--text)' }}>Automate Your</span>
             <br />
             <span style={{
-              background: 'linear-gradient(135deg, #7c6bff 0%, #ff6b9d 50%, #6bffcc 100%)',
+              background: 'linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #10B981 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
             }}>
@@ -354,7 +354,7 @@ export default function LandingPage() {
                 fontWeight: 800,
                 fontSize: '15px',
                 textDecoration: 'none',
-                boxShadow: '0 8px 32px rgba(124,107,255,0.5)',
+                boxShadow: '0 8px 32px rgba(99,102,241,0.5)',
                 letterSpacing: '0.02em',
               }}
             >
@@ -407,7 +407,7 @@ export default function LandingPage() {
       <section id="features" className="relative px-6 py-24" style={{ zIndex: 1 }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: 'rgba(107,255,204,0.1)', border: '1px solid rgba(107,255,204,0.2)' }}>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.2)' }}>
               <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '11px', color: 'var(--accent-cyan)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Platform Features</span>
             </div>
             <h2 style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: 'clamp(2rem, 4vw, 3rem)', color: 'var(--text)', lineHeight: 1.1, marginBottom: '16px' }}>
@@ -420,12 +420,12 @@ export default function LandingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
-              { icon: Zap, color: '#7c6bff', title: 'Instant AI Responses', desc: 'Groq LLaMA 3 delivers structured, intelligent responses in under 2 seconds  -  one of the fastest AI inference engines available.' },
-              { icon: BarChart3, color: '#ff6b9d', title: 'Analytics Dashboard', desc: 'Track your productivity metrics, agent usage, task completion rates, and meeting sentiment trends over time.' },
-              { icon: Globe, color: '#6bffcc', title: 'No Backend Required', desc: 'Next.js API routes handle everything. No separate server to manage, deploy, or maintain. Just your API key.' },
-              { icon: Shield, color: '#ffb86b', title: 'Your Data, Your Key', desc: 'You supply your own free Groq API key. No data is ever sent to AutoFlow servers. Complete privacy by design.' },
-              { icon: Layers, color: '#7c6bff', title: 'Persistent Storage', desc: 'Connect Supabase for cloud-synced tasks, emails, meetings, and events that persist across all your devices.' },
-              { icon: Users, color: '#ff6b9d', title: 'Team-Ready', desc: 'Shared workspaces, role-based permissions, and multi-user collaboration available on the Team plan.' },
+              { icon: Zap, color: '#6366F1', title: 'Instant AI Responses', desc: 'Groq LLaMA 3 delivers structured, intelligent responses in under 2 seconds  -  one of the fastest AI inference engines available.' },
+              { icon: BarChart3, color: '#8B5CF6', title: 'Analytics Dashboard', desc: 'Track your productivity metrics, agent usage, task completion rates, and meeting sentiment trends over time.' },
+              { icon: Globe, color: '#10B981', title: 'No Backend Required', desc: 'Next.js API routes handle everything. No separate server to manage, deploy, or maintain. Just your API key.' },
+              { icon: Shield, color: '#F59E0B', title: 'Your Data, Your Key', desc: 'You supply your own free Groq API key. No data is ever sent to AutoFlow servers. Complete privacy by design.' },
+              { icon: Layers, color: '#6366F1', title: 'Persistent Storage', desc: 'Connect Supabase for cloud-synced tasks, emails, meetings, and events that persist across all your devices.' },
+              { icon: Users, color: '#8B5CF6', title: 'Team-Ready', desc: 'Shared workspaces, role-based permissions, and multi-user collaboration available on the Team plan.' },
             ].map((feat, i) => {
               const Icon = feat.icon;
               return (
@@ -458,7 +458,7 @@ export default function LandingPage() {
       <section id="agents" className="relative px-6 py-24" style={{ zIndex: 1 }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: 'rgba(124,107,255,0.1)', border: '1px solid rgba(124,107,255,0.2)' }}>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.2)' }}>
               <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '11px', color: 'var(--accent)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>The Agents</span>
             </div>
             <h2 style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: 'clamp(2rem, 4vw, 3rem)', color: 'var(--text)', lineHeight: 1.1 }}>
@@ -515,7 +515,7 @@ export default function LandingPage() {
       <section className="relative px-6 py-24" style={{ zIndex: 1 }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: 'rgba(255,107,157,0.1)', border: '1px solid rgba(255,107,157,0.2)' }}>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: 'rgba(139,92,246,0.1)', border: '1px solid rgba(139,92,246,0.2)' }}>
               <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '11px', color: 'var(--accent-pink)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Testimonials</span>
             </div>
             <h2 style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', color: 'var(--text)', lineHeight: 1.1 }}>
@@ -534,13 +534,13 @@ export default function LandingPage() {
                 style={{ background: 'var(--surface)', border: '1px solid var(--border-color)' }}
               >
                 <div className="flex gap-0.5 mb-4">
-                  {[...Array(5)].map((_, i) => <Star key={i} size={13} style={{ color: '#ffb86b' }} fill="#ffb86b" />)}
+                  {[...Array(5)].map((_, i) => <Star key={i} size={13} style={{ color: '#F59E0B' }} fill="#F59E0B" />)}
                 </div>
                 <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '14px', color: 'var(--text)', lineHeight: 1.7, flex: 1, marginBottom: '20px' }}>
                   "{t.quote}"
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold" style={{ background: 'linear-gradient(135deg, #7c6bff, #ff6b9d)', color: 'white', fontFamily: 'var(--font-syne)' }}>
+                  <div className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold" style={{ background: 'linear-gradient(135deg, #6366F1, #8B5CF6)', color: 'white', fontFamily: 'var(--font-syne)' }}>
                     {t.avatar}
                   </div>
                   <div>
@@ -560,7 +560,7 @@ export default function LandingPage() {
       <section id="pricing" className="relative px-6 py-24" style={{ zIndex: 1 }}>
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: 'rgba(107,255,204,0.1)', border: '1px solid rgba(107,255,204,0.2)' }}>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.2)' }}>
               <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '11px', color: 'var(--accent-cyan)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Pricing</span>
             </div>
             <h2 style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', color: 'var(--text)', lineHeight: 1.1 }}>
@@ -581,15 +581,15 @@ export default function LandingPage() {
                 transition={{ delay: i * 0.1 }}
                 className="p-6 rounded-2xl relative overflow-hidden"
                 style={{
-                  background: plan.highlight ? 'rgba(124,107,255,0.08)' : 'var(--surface)',
-                  border: `1px solid ${plan.highlight ? 'rgba(124,107,255,0.35)' : 'var(--border-color)'}`,
+                  background: plan.highlight ? 'rgba(99,102,241,0.08)' : 'var(--surface)',
+                  border: `1px solid ${plan.highlight ? 'rgba(99,102,241,0.35)' : 'var(--border-color)'}`,
                 }}
               >
                 {plan.highlight && (
                   <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, var(--accent), transparent)' }} />
                 )}
                 {plan.highlight && (
-                  <div className="absolute top-4 right-4 px-2 py-0.5 rounded-md" style={{ background: 'rgba(124,107,255,0.2)', border: '1px solid rgba(124,107,255,0.3)', fontFamily: 'var(--font-dm-mono)', fontSize: '9px', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                  <div className="absolute top-4 right-4 px-2 py-0.5 rounded-md" style={{ background: 'rgba(99,102,241,0.2)', border: '1px solid rgba(99,102,241,0.3)', fontFamily: 'var(--font-dm-mono)', fontSize: '9px', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                     Popular
                   </div>
                 )}
@@ -624,7 +624,7 @@ export default function LandingPage() {
                     fontSize: '13px',
                     textDecoration: 'none',
                     border: plan.highlight ? 'none' : '1px solid var(--border-color)',
-                    boxShadow: plan.highlight ? '0 4px 20px rgba(124,107,255,0.35)' : 'none',
+                    boxShadow: plan.highlight ? '0 4px 20px rgba(99,102,241,0.35)' : 'none',
                   }}
                 >
                   {plan.price === 'Free' ? 'Get Started Free' : `Start with ${plan.name}`}
@@ -641,7 +641,7 @@ export default function LandingPage() {
       <section id="faq" className="relative px-6 py-24" style={{ zIndex: 1 }}>
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: 'rgba(255,184,107,0.1)', border: '1px solid rgba(255,184,107,0.2)' }}>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.2)' }}>
               <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '11px', color: 'var(--accent-amber)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>FAQ</span>
             </div>
             <h2 style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', color: 'var(--text)', lineHeight: 1.1 }}>
@@ -657,7 +657,7 @@ export default function LandingPage() {
       <footer className="relative border-t px-6 py-10" style={{ borderColor: 'var(--border-color)', zIndex: 1 }}>
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2.5">
-            <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #7c6bff, #ff6b9d)' }}>
+            <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #6366F1, #8B5CF6)' }}>
               <Zap size={12} className="text-white" fill="white" />
             </div>
             <span style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: '15px', color: 'var(--text)' }}>AutoFlow AI</span>

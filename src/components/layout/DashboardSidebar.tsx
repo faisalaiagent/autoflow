@@ -9,12 +9,12 @@ import {
 import { cn } from '@/lib/utils';
 
 const navItems = [
-  { label: 'Overview', href: '/dashboard', icon: LayoutDashboard, accent: '#7c6bff' },
-  { label: 'Email Assistant', href: '/dashboard/email', icon: Mail, accent: '#7c6bff' },
-  { label: 'Meeting Intel', href: '/dashboard/meeting', icon: Mic, accent: '#ff6b9d' },
-  { label: 'Task Manager', href: '/dashboard/tasks', icon: CheckSquare, accent: '#6bffcc' },
-  { label: 'AI Calendar', href: '/dashboard/calendar', icon: Calendar, accent: '#ffb86b' },
-  { label: 'Analytics', href: '/dashboard/analytics', icon: BarChart2, accent: '#7c6bff' },
+  { label: 'Overview', href: '/dashboard', icon: LayoutDashboard, accent: '#6366F1' },
+  { label: 'Email Assistant', href: '/dashboard/email', icon: Mail, accent: '#6366F1' },
+  { label: 'Meeting Intel', href: '/dashboard/meeting', icon: Mic, accent: '#8B5CF6' },
+  { label: 'Task Manager', href: '/dashboard/tasks', icon: CheckSquare, accent: '#10B981' },
+  { label: 'AI Calendar', href: '/dashboard/calendar', icon: Calendar, accent: '#F59E0B' },
+  { label: 'Analytics', href: '/dashboard/analytics', icon: BarChart2, accent: '#6366F1' },
   { label: 'Settings', href: '/dashboard/settings', icon: Settings, accent: '#8888aa' },
 ];
 
@@ -75,8 +75,8 @@ export function DashboardSidebar({ onClose }: DashboardSidebarProps) {
                 whileHover={{ x: 2 }}
                 className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl cursor-pointer transition-all"
                 style={{
-                  background: isActive ? 'rgba(124,107,255,0.12)' : 'transparent',
-                  border: isActive ? '1px solid rgba(124,107,255,0.2)' : '1px solid transparent',
+                  background: isActive ? 'rgba(99,102,241,0.12)' : 'transparent',
+                  border: isActive ? '1px solid rgba(99,102,241,0.2)' : '1px solid transparent',
                 }}
               >
                 <Icon size={15} style={{ color: isActive ? item.accent : 'var(--text-subtle)', flexShrink: 0 }} />

@@ -28,7 +28,7 @@ export default function BlogPostPage() {
       {/* Nav */}
       <nav className="flex items-center justify-between px-6 py-4 border-b" style={{ borderColor: 'var(--border-color)', background: 'rgba(8,8,16,0.95)', backdropFilter: 'blur(20px)', position: 'sticky', top: 0, zIndex: 50 }}>
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #7c6bff, #ff6b9d)' }}>
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #6366F1, #8B5CF6)' }}>
             <Zap size={15} color="white" fill="white" />
           </div>
           <span style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: '16px', color: 'var(--text)' }}>AutoFlow AI</span>
@@ -42,11 +42,11 @@ export default function BlogPostPage() {
       </nav>
 
       {/* Hero */}
-      <div style={{ background: 'linear-gradient(180deg, rgba(124,107,255,0.08) 0%, transparent 100%)', borderBottom: '1px solid var(--border-color)', padding: '48px 24px 40px' }}>
+      <div style={{ background: 'linear-gradient(180deg, rgba(99,102,241,0.08) 0%, transparent 100%)', borderBottom: '1px solid var(--border-color)', padding: '48px 24px 40px' }}>
         <div className="max-w-3xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <div className="flex items-center gap-3 mb-5 flex-wrap">
-              <span className="px-3 py-1 rounded-full" style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: '#7c6bff', background: 'rgba(124,107,255,0.1)', border: '1px solid rgba(124,107,255,0.2)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+              <span className="px-3 py-1 rounded-full" style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: '#6366F1', background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.2)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
                 Email Productivity
               </span>
               <div className="flex items-center gap-1.5" style={{ color: 'var(--text-subtle)' }}>
@@ -65,7 +65,7 @@ export default function BlogPostPage() {
               Most professionals spend 2 to 3 hours every single day just on email. Here is how an AI email agent changes that completely — and why the replies it generates are often sharper, cleaner, and more effective than what most people write under pressure.
             </p>
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0" style={{ background: 'linear-gradient(135deg, #7c6bff, #ff6b9d)', color: 'white', fontFamily: 'var(--font-syne)' }}>
+              <div className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0" style={{ background: 'linear-gradient(135deg, #6366F1, #8B5CF6)', color: 'white', fontFamily: 'var(--font-syne)' }}>
                 SF
               </div>
               <div>
@@ -94,7 +94,7 @@ export default function BlogPostPage() {
           {p("Then you write something. Then you re-read it and decide it sounds too blunt, or too long, or not clear enough. You edit it. Sometimes you read it a third time before you send it because you are worried about how it will land. By the time you press send on a slightly tricky email, you may have spent 10 or 15 minutes on something that, from the outside, looks like it took 30 seconds.")}
 
           {/* Callout */}
-          <div className="my-8 p-6 rounded-2xl flex gap-4" style={{ background: 'rgba(124,107,255,0.06)', border: '1px solid rgba(124,107,255,0.2)' }}>
+          <div className="my-8 p-6 rounded-2xl flex gap-4" style={{ background: 'rgba(99,102,241,0.06)', border: '1px solid rgba(99,102,241,0.2)' }}>
             <Quote size={20} style={{ color: 'var(--accent)', flexShrink: 0, marginTop: '2px' }} />
             <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '16px', color: 'var(--text)', lineHeight: 1.75, margin: 0, fontStyle: 'italic' }}>
               The average professional spends up to 4 hours per day on email. That is nearly half a working day consumed by a single communication channel.
@@ -123,11 +123,11 @@ export default function BlogPostPage() {
 
           <div className="space-y-4 my-6">
             {[
-              { icon: CheckCircle2, color: '#6bffcc', title: 'Declining requests gracefully', desc: 'Saying no is one of the hardest things to do in email without damaging a relationship. A good AI handles the softening, the explanation, and the door-left-open closing far better than most people do when they are in a rush.' },
-              { icon: CheckCircle2, color: '#6bffcc', title: 'Responding to complaints or frustration', desc: 'When someone is unhappy, the tone of your reply matters enormously. Too defensive and you escalate. Too apologetic and you look weak. Getting the balance right takes care. The AI does this well because it has no ego in the exchange.' },
-              { icon: CheckCircle2, color: '#6bffcc', title: 'Following up without sounding annoying', desc: 'Follow-up emails are awkward to write because you are essentially saying "you forgot about me" without saying that. An AI can thread this needle naturally every single time.' },
-              { icon: CheckCircle2, color: '#6bffcc', title: 'Complex multi-point replies', desc: 'When someone sends an email with four different questions buried in three paragraphs, organizing a reply that addresses all of them cleanly is genuinely difficult. The AI extracts the points and structures the answer clearly.' },
-              { icon: CheckCircle2, color: '#6bffcc', title: 'Writing to people in other cultures or industries', desc: 'Communication norms vary significantly. A tone that feels normal to you might read as abrupt or overly casual to someone from a different professional background. The AI\'s training covers a broad range of communication styles.' },
+              { icon: CheckCircle2, color: '#10B981', title: 'Declining requests gracefully', desc: 'Saying no is one of the hardest things to do in email without damaging a relationship. A good AI handles the softening, the explanation, and the door-left-open closing far better than most people do when they are in a rush.' },
+              { icon: CheckCircle2, color: '#10B981', title: 'Responding to complaints or frustration', desc: 'When someone is unhappy, the tone of your reply matters enormously. Too defensive and you escalate. Too apologetic and you look weak. Getting the balance right takes care. The AI does this well because it has no ego in the exchange.' },
+              { icon: CheckCircle2, color: '#10B981', title: 'Following up without sounding annoying', desc: 'Follow-up emails are awkward to write because you are essentially saying "you forgot about me" without saying that. An AI can thread this needle naturally every single time.' },
+              { icon: CheckCircle2, color: '#10B981', title: 'Complex multi-point replies', desc: 'When someone sends an email with four different questions buried in three paragraphs, organizing a reply that addresses all of them cleanly is genuinely difficult. The AI extracts the points and structures the answer clearly.' },
+              { icon: CheckCircle2, color: '#10B981', title: 'Writing to people in other cultures or industries', desc: 'Communication norms vary significantly. A tone that feels normal to you might read as abrupt or overly casual to someone from a different professional background. The AI\'s training covers a broad range of communication styles.' },
             ].map(({ icon: Icon, color, title, desc }) => (
               <div key={title} className="flex gap-4 p-4 rounded-xl" style={{ background: 'var(--surface)', border: '1px solid var(--border-color)' }}>
                 <Icon size={18} style={{ color, flexShrink: 0, marginTop: '2px' }} />
@@ -150,9 +150,9 @@ export default function BlogPostPage() {
               { title: 'Emails that require confidential information', desc: 'Do not paste emails that contain sensitive personal data, private business information, or anything you would not want processed by a third-party AI service. Use judgment about what goes into any AI tool.' },
             ].map(({ title, desc }) => (
               <div key={title} className="flex gap-3 p-4 rounded-xl" style={{ background: 'rgba(248,113,113,0.05)', border: '1px solid rgba(248,113,113,0.15)' }}>
-                <AlertCircle size={16} style={{ color: '#f87171', flexShrink: 0, marginTop: '2px' }} />
+                <AlertCircle size={16} style={{ color: '#EF4444', flexShrink: 0, marginTop: '2px' }} />
                 <div>
-                  <p style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '13px', color: '#f87171', marginBottom: '3px' }}>{title}</p>
+                  <p style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '13px', color: '#EF4444', marginBottom: '3px' }}>{title}</p>
                   <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '13px', color: 'var(--text-muted)', lineHeight: 1.65, margin: 0 }}>{desc}</p>
                 </div>
               </div>
@@ -173,7 +173,7 @@ export default function BlogPostPage() {
               { num: '04', title: 'Use the key points as a checklist', desc: 'The tool extracts key points from your reply and shows them separately. Use this as a quick audit — if something important is missing from that list, it probably needs to be in the email.' },
             ].map(({ num, title, desc }) => (
               <div key={num} className="flex gap-4 p-5 rounded-xl" style={{ background: 'var(--surface)', border: '1px solid var(--border-color)' }}>
-                <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 text-xs font-bold" style={{ background: 'rgba(124,107,255,0.15)', color: 'var(--accent)', fontFamily: 'var(--font-dm-mono)' }}>
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 text-xs font-bold" style={{ background: 'rgba(99,102,241,0.15)', color: 'var(--accent)', fontFamily: 'var(--font-dm-mono)' }}>
                   {num}
                 </div>
                 <div>
@@ -191,8 +191,8 @@ export default function BlogPostPage() {
           {p("That is an underrated benefit. Not just the time saved — the elimination of procrastination around communication. When replying is easy, you reply quickly. When you reply quickly, relationships stay warm, things do not fall through the cracks, and you develop a reputation for being responsive and professional.")}
 
           {/* Callout 2 */}
-          <div className="my-8 p-6 rounded-2xl flex gap-4" style={{ background: 'rgba(107,255,204,0.06)', border: '1px solid rgba(107,255,204,0.2)' }}>
-            <Lightbulb size={20} style={{ color: '#6bffcc', flexShrink: 0, marginTop: '2px' }} />
+          <div className="my-8 p-6 rounded-2xl flex gap-4" style={{ background: 'rgba(16,185,129,0.06)', border: '1px solid rgba(16,185,129,0.2)' }}>
+            <Lightbulb size={20} style={{ color: '#10B981', flexShrink: 0, marginTop: '2px' }} />
             <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '16px', color: 'var(--text)', lineHeight: 1.75, margin: 0 }}>
               The best professionals are not necessarily the ones who write the most polished emails. They are the ones who are consistently present, responsive, and clear. AI helps you be all three without burning through your day.
             </p>
@@ -209,9 +209,9 @@ export default function BlogPostPage() {
           {p("Once you see a well-structured, correctly toned, complete reply generated in under three seconds for something that would have taken you five minutes, it is difficult to go back to doing it manually every time.")}
 
           {/* CTA */}
-          <div className="mt-12 p-8 rounded-2xl text-center relative overflow-hidden" style={{ background: 'rgba(124,107,255,0.07)', border: '1px solid rgba(124,107,255,0.2)' }}>
-            <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(124,107,255,0.5), transparent)' }} />
-            <div className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ background: 'rgba(124,107,255,0.15)', border: '1px solid rgba(124,107,255,0.25)' }}>
+          <div className="mt-12 p-8 rounded-2xl text-center relative overflow-hidden" style={{ background: 'rgba(99,102,241,0.07)', border: '1px solid rgba(99,102,241,0.2)' }}>
+            <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(99,102,241,0.5), transparent)' }} />
+            <div className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ background: 'rgba(99,102,241,0.15)', border: '1px solid rgba(99,102,241,0.25)' }}>
               <Mail size={20} style={{ color: 'var(--accent)' }} />
             </div>
             <h3 style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: '20px', color: 'var(--text)', marginBottom: '10px' }}>
@@ -220,7 +220,7 @@ export default function BlogPostPage() {
             <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '14px', color: 'var(--text-muted)', marginBottom: '20px', lineHeight: 1.7 }}>
               Paste any email you received right now. Add your tone and any context. See what the AI writes back. No signup required to get started.
             </p>
-            <Link href="/dashboard/email" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'var(--accent)', color: 'white', padding: '12px 28px', borderRadius: '12px', fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '14px', boxShadow: '0 4px 20px rgba(124,107,255,0.35)' }}>
+            <Link href="/dashboard/email" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'var(--accent)', color: 'white', padding: '12px 28px', borderRadius: '12px', fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '14px', boxShadow: '0 4px 20px rgba(99,102,241,0.35)' }}>
               <Mail size={15} />
               Open Email Agent
               <ArrowRight size={14} />

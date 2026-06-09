@@ -11,9 +11,9 @@ const posts = [
     category: 'Email Productivity',
     readTime: '7 min read',
     date: 'June 4, 2024',
-    color: '#7c6bff',
-    bg: 'rgba(124,107,255,0.06)',
-    border: 'rgba(124,107,255,0.2)',
+    color: '#6366F1',
+    bg: 'rgba(99,102,241,0.06)',
+    border: 'rgba(99,102,241,0.2)',
   },
   {
     slug: 'ai-meeting-summary',
@@ -22,9 +22,9 @@ const posts = [
     category: 'Meeting Productivity',
     readTime: '8 min read',
     date: 'June 5, 2024',
-    color: '#ff6b9d',
-    bg: 'rgba(255,107,157,0.06)',
-    border: 'rgba(255,107,157,0.2)',
+    color: '#8B5CF6',
+    bg: 'rgba(139,92,246,0.06)',
+    border: 'rgba(139,92,246,0.2)',
   },
   {
     slug: 'ai-task-manager',
@@ -33,9 +33,9 @@ const posts = [
     category: 'Task Management',
     readTime: '8 min read',
     date: 'June 6, 2024',
-    color: '#6bffcc',
-    bg: 'rgba(107,255,204,0.06)',
-    border: 'rgba(107,255,204,0.2)',
+    color: '#10B981',
+    bg: 'rgba(16,185,129,0.06)',
+    border: 'rgba(16,185,129,0.2)',
   },
   {
     slug: 'ai-calendar-assistant',
@@ -44,9 +44,9 @@ const posts = [
     category: 'Calendar Productivity',
     readTime: '8 min read',
     date: 'June 7, 2024',
-    color: '#ffb86b',
-    bg: 'rgba(255,184,107,0.06)',
-    border: 'rgba(255,184,107,0.2)',
+    color: '#F59E0B',
+    bg: 'rgba(245,158,11,0.06)',
+    border: 'rgba(245,158,11,0.2)',
   },
 ];
 
@@ -55,7 +55,7 @@ export default function BlogPage() {
     <div style={{ background: 'var(--bg)', color: 'var(--text)', minHeight: '100vh' }}>
       <nav className="flex items-center justify-between px-6 py-4 border-b" style={{ borderColor: 'var(--border-color)', background: 'rgba(8,8,16,0.95)', backdropFilter: 'blur(20px)', position: 'sticky', top: 0, zIndex: 50 }}>
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #7c6bff, #ff6b9d)' }}>
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #6366F1, #8B5CF6)' }}>
             <Zap size={15} color="white" fill="white" />
           </div>
           <span style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: '16px', color: 'var(--text)' }}>AutoFlow AI</span>
@@ -70,7 +70,7 @@ export default function BlogPage() {
 
       <div className="max-w-4xl mx-auto px-6 py-16">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: 'rgba(124,107,255,0.1)', border: '1px solid rgba(124,107,255,0.2)' }}>
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-4" style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.2)' }}>
             <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '11px', color: 'var(--accent)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Blog</span>
           </div>
           <h1 style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: 'clamp(2rem, 5vw, 3rem)', color: 'var(--text)', lineHeight: 1.1, marginBottom: '14px' }}>

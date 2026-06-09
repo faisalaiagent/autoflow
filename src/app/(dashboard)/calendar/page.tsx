@@ -18,7 +18,7 @@ const suggestions = [
   'Schedule a deep work block tomorrow 10 AM–12 PM',
 ]
 
-const eventColors = ['#7c6bff', '#ff6b9d', '#6bffcc', '#ffb86b']
+const eventColors = ['#6366F1', '#8B5CF6', '#10B981', '#F59E0B']
 
 export default function CalendarPage() {
   const { events, addEvent, incrementStat, groqApiKey } = useAgentStore()
@@ -72,7 +72,7 @@ export default function CalendarPage() {
               <div className="absolute top-0 left-0 right-0 h-px opacity-60" style={{ background: 'linear-gradient(90deg, transparent, var(--accent-amber), transparent)' }} />
               <div className="flex items-center justify-between mb-5">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: 'rgba(255,184,107,0.15)', border: '1px solid rgba(255,184,107,0.25)' }}>
+                  <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: 'rgba(245,158,11,0.15)', border: '1px solid rgba(245,158,11,0.25)' }}>
                     <Calendar size={16} style={{ color: 'var(--accent-amber)' }} />
                   </div>
                   <div>
@@ -101,7 +101,7 @@ export default function CalendarPage() {
                   onClick={handleRequest}
                   disabled={loading || !input.trim()}
                   className="w-full flex items-center justify-center gap-2 py-3 rounded-xl"
-                  style={{ background: 'var(--accent-amber)', color: '#080810', fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '13px', border: 'none', cursor: loading || !input.trim() ? 'not-allowed' : 'pointer', opacity: loading || !input.trim() ? 0.5 : 1, boxShadow: '0 4px 20px rgba(255,184,107,0.25)' }}
+                  style={{ background: 'var(--accent-amber)', color: '#0F172A', fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '13px', border: 'none', cursor: loading || !input.trim() ? 'not-allowed' : 'pointer', opacity: loading || !input.trim() ? 0.5 : 1, boxShadow: '0 4px 20px rgba(245,158,11,0.25)' }}
                 >
                   <Send size={14} />
                   {loading ? 'Processing…' : 'Send to Calendar AI'}
@@ -118,7 +118,7 @@ export default function CalendarPage() {
               <div className="space-y-1.5">
                 {suggestions.map((s, i) => (
                   <button key={i} onClick={() => setInput(s)} className="w-full text-left px-3 py-2 rounded-lg" style={{ fontFamily: 'var(--font-instrument)', fontSize: '12px', color: 'var(--text-muted)', background: 'var(--surface-2)', border: '1px solid var(--border-color)', cursor: 'pointer', transition: 'all 0.15s' }}
-                    onMouseEnter={(e) => { (e.currentTarget.style.borderColor = 'rgba(255,184,107,0.3)'); (e.currentTarget.style.color = 'var(--text)') }}
+                    onMouseEnter={(e) => { (e.currentTarget.style.borderColor = 'rgba(245,158,11,0.3)'); (e.currentTarget.style.color = 'var(--text)') }}
                     onMouseLeave={(e) => { (e.currentTarget.style.borderColor = 'var(--border-color)'); (e.currentTarget.style.color = 'var(--text-muted)') }}
                   >
                     ↗ {s}
@@ -132,7 +132,7 @@ export default function CalendarPage() {
               {result && (
                 <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="space-y-3">
                   {result.message && (
-                    <div className="p-4 rounded-2xl" style={{ background: 'rgba(255,184,107,0.05)', border: '1px solid rgba(255,184,107,0.15)' }}>
+                    <div className="p-4 rounded-2xl" style={{ background: 'rgba(245,158,11,0.05)', border: '1px solid rgba(245,158,11,0.15)' }}>
                       <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '13px', color: 'var(--text)', lineHeight: 1.6 }}>🗓️ {result.message}</p>
                     </div>
                   )}
@@ -146,7 +146,7 @@ export default function CalendarPage() {
                     </div>
                   )}
                   {result.suggestions?.length > 0 && (
-                    <div className="p-4 rounded-2xl" style={{ background: 'rgba(107,255,204,0.05)', border: '1px solid rgba(107,255,204,0.15)' }}>
+                    <div className="p-4 rounded-2xl" style={{ background: 'rgba(16,185,129,0.05)', border: '1px solid rgba(16,185,129,0.15)' }}>
                       <div className="flex items-center gap-1.5 mb-2">
                         <Lightbulb size={12} style={{ color: 'var(--accent-cyan)' }} />
                         <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: 'var(--accent-cyan)', textTransform: 'uppercase' }}>Suggestions</span>
@@ -169,7 +169,7 @@ export default function CalendarPage() {
 
             {loading && (
               <div className="flex items-center justify-center py-12">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center animate-pulse" style={{ background: 'rgba(255,184,107,0.15)', border: '1px solid rgba(255,184,107,0.25)' }}>
+                <div className="w-8 h-8 rounded-full flex items-center justify-center animate-pulse" style={{ background: 'rgba(245,158,11,0.15)', border: '1px solid rgba(245,158,11,0.25)' }}>
                   <Sparkles size={16} style={{ color: 'var(--accent-amber)' }} />
                 </div>
               </div>
@@ -177,7 +177,7 @@ export default function CalendarPage() {
 
             {!loading && events.length === 0 && (
               <div className="flex flex-col items-center justify-center py-12 gap-3 text-center">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center" style={{ background: 'rgba(255,184,107,0.1)', border: '1px solid rgba(255,184,107,0.2)' }}>
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center" style={{ background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.2)' }}>
                   <Calendar size={24} style={{ color: 'var(--accent-amber)' }} />
                 </div>
                 <h3 style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '14px', color: 'var(--text)' }}>No events yet</h3>

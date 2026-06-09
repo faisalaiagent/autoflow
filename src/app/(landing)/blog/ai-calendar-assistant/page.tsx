@@ -35,7 +35,7 @@ export default function CalendarBlogPost() {
         style={{ borderColor: 'var(--border-color)', background: 'rgba(8,8,16,0.95)', backdropFilter: 'blur(20px)', position: 'sticky', top: 0, zIndex: 50 }}
       >
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #7c6bff, #ff6b9d)' }}>
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #6366F1, #8B5CF6)' }}>
             <Zap size={15} color="white" fill="white" />
           </div>
           <span style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: '16px', color: 'var(--text)' }}>AutoFlow AI</span>
@@ -52,13 +52,13 @@ export default function CalendarBlogPost() {
       </nav>
 
       {/* Hero */}
-      <div style={{ background: 'linear-gradient(180deg, rgba(255,184,107,0.08) 0%, transparent 100%)', borderBottom: '1px solid var(--border-color)', padding: '48px 24px 40px' }}>
+      <div style={{ background: 'linear-gradient(180deg, rgba(245,158,11,0.08) 0%, transparent 100%)', borderBottom: '1px solid var(--border-color)', padding: '48px 24px 40px' }}>
         <div className="max-w-3xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <div className="flex items-center gap-3 mb-5 flex-wrap">
               <span
                 className="px-3 py-1 rounded-full"
-                style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: '#ffb86b', background: 'rgba(255,184,107,0.1)', border: '1px solid rgba(255,184,107,0.2)', letterSpacing: '0.08em', textTransform: 'uppercase' }}
+                style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: '#F59E0B', background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.2)', letterSpacing: '0.08em', textTransform: 'uppercase' }}
               >
                 Calendar Productivity
               </span>
@@ -80,7 +80,7 @@ export default function CalendarBlogPost() {
             <div className="flex items-center gap-3">
               <div
                 className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0"
-                style={{ background: 'linear-gradient(135deg, #7c6bff, #ff6b9d)', color: 'white', fontFamily: 'var(--font-syne)' }}
+                style={{ background: 'linear-gradient(135deg, #6366F1, #8B5CF6)', color: 'white', fontFamily: 'var(--font-syne)' }}
               >
                 SF
               </div>
@@ -109,8 +109,8 @@ export default function CalendarBlogPost() {
           <P>Think about everything that falls under this category. Sending availability emails. Waiting for responses. Updating an event when something changes. Moving things around when a conflict appears. Figuring out which meeting to reschedule when two things overlap. Setting reminders. Writing event descriptions. Making sure a meeting has a dial-in link or a location. Checking whether the time zone is right for a call with someone in a different country.</P>
 
           {/* Pull quote */}
-          <div className="my-8 p-6 rounded-2xl flex gap-4" style={{ background: 'rgba(255,184,107,0.06)', border: '1px solid rgba(255,184,107,0.2)' }}>
-            <Quote size={20} style={{ color: '#ffb86b', flexShrink: 0, marginTop: '2px' }} />
+          <div className="my-8 p-6 rounded-2xl flex gap-4" style={{ background: 'rgba(245,158,11,0.06)', border: '1px solid rgba(245,158,11,0.2)' }}>
+            <Quote size={20} style={{ color: '#F59E0B', flexShrink: 0, marginTop: '2px' }} />
             <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '16px', color: 'var(--text)', lineHeight: 1.75, margin: 0, fontStyle: 'italic' }}>
               Research suggests professionals spend up to 30 minutes every working day just on scheduling and calendar management. That is more than two full working weeks per year spent on calendar logistics alone.
             </p>
@@ -141,27 +141,27 @@ export default function CalendarBlogPost() {
               {
                 input: '"Schedule a 45-minute kickoff call with the new client for early next week. Make it a morning slot and set a 30-minute reminder."',
                 output: 'Event created: Client Kickoff Call, Monday 10:00 AM to 10:45 AM. Description added. 30-minute reminder set. Attendee field ready for email addresses.',
-                color: '#ffb86b',
+                color: '#F59E0B',
               },
               {
                 input: '"I need to reschedule my Wednesday 3pm review meeting to Thursday. Check if I have anything Thursday afternoon first."',
                 output: 'Thursday afternoon checked: you have a call at 4:30pm. Suggested: Thursday at 2:00pm or 2:30pm to avoid the conflict. Reschedule confirmed to your chosen time.',
-                color: '#7c6bff',
+                color: '#6366F1',
               },
               {
                 input: '"Block two hours for deep work sometime Friday morning when I have no meetings."',
                 output: 'Friday schedule checked: you have a standup at 9am. Deep work block created: Friday 10:00 AM to 12:00 PM. Marked as busy to prevent other bookings.',
-                color: '#6bffcc',
+                color: '#10B981',
               },
               {
                 input: '"What is on my calendar for the rest of this week?"',
                 output: 'Summary of all events through Friday: titles, times, durations, and locations listed clearly. Any conflicts or back-to-back sessions flagged with suggestions.',
-                color: '#ff6b9d',
+                color: '#8B5CF6',
               },
               {
                 input: '"Cancel the Thursday vendor call and create a reminder to follow up with them next Monday morning."',
                 output: 'Thursday vendor call removed. Reminder task created: follow up with vendor, Monday morning, medium priority.',
-                color: '#ffb86b',
+                color: '#F59E0B',
               },
             ].map(({ input, output, color }, i) => (
               <div key={i} className="rounded-2xl overflow-hidden" style={{ border: `1px solid ${color}25` }}>
@@ -185,31 +185,31 @@ export default function CalendarBlogPost() {
             {[
               {
                 icon: RefreshCw,
-                color: '#ffb86b',
+                color: '#F59E0B',
                 title: 'Rescheduling chains',
                 desc: 'When one thing moves, three others need to move too. Tracking the ripple effect of a single schedule change is mentally exhausting and easy to get wrong. Describe the change you need and ask the AI to check for downstream conflicts — it handles the analysis so you do not have to hold the whole puzzle in your head simultaneously.',
               },
               {
                 icon: Users,
-                color: '#7c6bff',
+                color: '#6366F1',
                 title: 'Scheduling across time zones',
                 desc: 'Figuring out what 9am Eastern means for someone in Karachi, or whether a 3pm call works for someone in London, requires mental arithmetic that breaks your flow every time. Tell the AI the time zones involved and let it handle the conversion and suggest times that work for everyone.',
               },
               {
                 icon: MapPin,
-                color: '#6bffcc',
+                color: '#10B981',
                 title: 'Planning a week with back-to-back meetings',
                 desc: 'When your calendar is dense, finding time for focused work becomes a puzzle. Ask the AI to look at your week and identify windows of 90 minutes or more with no meetings — the deep work slots you need but rarely remember to protect before they get booked.',
               },
               {
                 icon: Bell,
-                color: '#ff6b9d',
+                color: '#8B5CF6',
                 title: 'Making sure the right things have reminders',
                 desc: 'Important meetings and deadlines often do not have reminders set because adding them is a manual step that gets skipped. When you create events through the AI assistant, reminders are included by default — which means things do not get forgotten just because you were in a hurry when you scheduled them.',
               },
               {
                 icon: Shuffle,
-                color: '#ffb86b',
+                color: '#F59E0B',
                 title: 'Finding time for tasks inside a meeting-heavy schedule',
                 desc: 'Professionals with full calendars often struggle to carve out time for the actual work that meetings discuss. The AI can take a task you need to complete and find a realistic time slot for it in your schedule — not just a time that exists on paper but one that has enough buffer around it to actually be useful.',
               },
@@ -234,31 +234,31 @@ export default function CalendarBlogPost() {
             {[
               {
                 num: '01',
-                color: '#ffb86b',
+                color: '#F59E0B',
                 title: 'Include time preferences in your request',
                 desc: 'Phrases like "morning slot," "after lunch," "before 5pm," or "not on Mondays" give the AI clear parameters to work with. The more specific your preferences, the more precisely the event lands in the right place on your schedule.',
               },
               {
                 num: '02',
-                color: '#7c6bff',
+                color: '#6366F1',
                 title: 'Mention the duration explicitly',
                 desc: 'Words like "quick call," "brief check-in," and "long session" help, but specific durations are better. "30 minutes," "an hour," or "90-minute deep dive" gives the AI an exact number to work with rather than requiring it to infer from vague language.',
               },
               {
                 num: '03',
-                color: '#6bffcc',
+                color: '#10B981',
                 title: 'Ask for a weekly view before scheduling new things',
                 desc: 'Starting your Monday by asking the AI to summarize your week gives you a clear picture of what is already committed before you start adding new things. This prevents the common problem of overbooking your schedule before you have a realistic sense of what you have already agreed to.',
               },
               {
                 num: '04',
-                color: '#ff6b9d',
+                color: '#8B5CF6',
                 title: 'Use it to protect your focus time',
                 desc: 'Proactively block deep work time through the assistant at the start of each week. Tell it to find two or three windows of 90 minutes or more and block them as focused work sessions. Schedule them before other people can fill that time with meetings.',
               },
               {
                 num: '05',
-                color: '#ffb86b',
+                color: '#F59E0B',
                 title: 'Combine it with your task manager',
                 desc: 'The most powerful workflow is using the calendar assistant and the task manager agent together. Create a task through the task agent, then ask the calendar assistant to find a slot in your schedule to work on it. This bridges the gap between knowing what needs to be done and actually protecting time to do it.',
               },
@@ -298,9 +298,9 @@ export default function CalendarBlogPost() {
               },
             ].map(({ title, desc }) => (
               <div key={title} className="flex gap-3 p-4 rounded-xl" style={{ background: 'rgba(248,113,113,0.05)', border: '1px solid rgba(248,113,113,0.15)' }}>
-                <AlertCircle size={15} style={{ color: '#f87171', flexShrink: 0, marginTop: '2px' }} />
+                <AlertCircle size={15} style={{ color: '#EF4444', flexShrink: 0, marginTop: '2px' }} />
                 <div>
-                  <p style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '13px', color: '#f87171', marginBottom: '3px' }}>{title}</p>
+                  <p style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '13px', color: '#EF4444', marginBottom: '3px' }}>{title}</p>
                   <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '13px', color: 'var(--text-muted)', lineHeight: 1.65, margin: 0 }}>{desc}</p>
                 </div>
               </div>
@@ -314,8 +314,8 @@ export default function CalendarBlogPost() {
           <P>There is a meaningful difference between people who manage their schedule reactively and people who design their schedule intentionally. Reactive scheduling means your calendar fills up with whatever other people put on it, and you spend your days running from one commitment to the next with no time left for the work that actually matters to you. Intentional scheduling means you decide in advance how your time is allocated — which meetings to accept, which time blocks to protect, which commitments to push back on.</P>
 
           {/* Insight callout */}
-          <div className="my-8 p-6 rounded-2xl flex gap-4" style={{ background: 'rgba(255,184,107,0.06)', border: '1px solid rgba(255,184,107,0.2)' }}>
-            <Lightbulb size={20} style={{ color: '#ffb86b', flexShrink: 0, marginTop: '2px' }} />
+          <div className="my-8 p-6 rounded-2xl flex gap-4" style={{ background: 'rgba(245,158,11,0.06)', border: '1px solid rgba(245,158,11,0.2)' }}>
+            <Lightbulb size={20} style={{ color: '#F59E0B', flexShrink: 0, marginTop: '2px' }} />
             <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '16px', color: 'var(--text)', lineHeight: 1.75, margin: 0 }}>
               The people who get the most done are rarely the ones who work the most hours. They are the ones who are most deliberate about which hours they work on which things. That deliberateness starts with how you manage your calendar.
             </p>
@@ -339,10 +339,10 @@ export default function CalendarBlogPost() {
           <P>The AutoFlow AI calendar assistant is free to use with your own Groq API key. Start by asking it to show you what your week looks like. Then ask it to find you two hours of protected focus time on your least-meeting-heavy day. Then tell it about a meeting you need to schedule. The experience from the first interaction is immediate — and the contrast with navigating a calendar app manually is hard to forget once you have felt it.</P>
 
           {/* CTA */}
-          <div className="mt-12 p-8 rounded-2xl text-center relative overflow-hidden" style={{ background: 'rgba(255,184,107,0.06)', border: '1px solid rgba(255,184,107,0.2)' }}>
-            <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(255,184,107,0.5), transparent)' }} />
-            <div className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ background: 'rgba(255,184,107,0.12)', border: '1px solid rgba(255,184,107,0.2)' }}>
-              <Calendar size={20} style={{ color: '#ffb86b' }} />
+          <div className="mt-12 p-8 rounded-2xl text-center relative overflow-hidden" style={{ background: 'rgba(245,158,11,0.06)', border: '1px solid rgba(245,158,11,0.2)' }}>
+            <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(245,158,11,0.5), transparent)' }} />
+            <div className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ background: 'rgba(245,158,11,0.12)', border: '1px solid rgba(245,158,11,0.2)' }}>
+              <Calendar size={20} style={{ color: '#F59E0B' }} />
             </div>
             <h3 style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: '20px', color: 'var(--text)', marginBottom: '10px' }}>
               Try the Calendar Assistant Free
@@ -352,7 +352,7 @@ export default function CalendarBlogPost() {
             </p>
             <Link
               href="/dashboard/calendar"
-              style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#ffb86b', color: '#0a0a12', padding: '12px 28px', borderRadius: '12px', fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: '14px', boxShadow: '0 4px 20px rgba(255,184,107,0.3)' }}
+              style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#F59E0B', color: '#0F172A', padding: '12px 28px', borderRadius: '12px', fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: '14px', boxShadow: '0 4px 20px rgba(245,158,11,0.3)' }}
             >
               <Calendar size={15} />
               Open Calendar Assistant
@@ -368,19 +368,19 @@ export default function CalendarBlogPost() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/blog/ai-email-reply"
-                style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', fontFamily: 'var(--font-syne)', fontWeight: 600, fontSize: '13px', color: '#7c6bff' }}
+                style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', fontFamily: 'var(--font-syne)', fontWeight: 600, fontSize: '13px', color: '#6366F1' }}
               >
                 Email Agent Article
               </Link>
               <Link
                 href="/blog/ai-meeting-summary"
-                style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', fontFamily: 'var(--font-syne)', fontWeight: 600, fontSize: '13px', color: '#ff6b9d' }}
+                style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', fontFamily: 'var(--font-syne)', fontWeight: 600, fontSize: '13px', color: '#8B5CF6' }}
               >
                 Meeting Summary Article
               </Link>
               <Link
                 href="/blog/ai-task-manager"
-                style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', fontFamily: 'var(--font-syne)', fontWeight: 600, fontSize: '13px', color: '#6bffcc' }}
+                style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px', fontFamily: 'var(--font-syne)', fontWeight: 600, fontSize: '13px', color: '#10B981' }}
               >
                 Task Manager Article
               </Link>

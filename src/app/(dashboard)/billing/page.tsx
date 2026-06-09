@@ -24,7 +24,7 @@ const plans = [
     name: 'Pro',
     price: '$19',
     period: '/month',
-    color: '#7c6bff',
+    color: '#6366F1',
     popular: true,
     features: [
       { text: 'All 4 AI agents', included: true },
@@ -40,7 +40,7 @@ const plans = [
     name: 'Team',
     price: '$49',
     period: '/month',
-    color: '#6bffcc',
+    color: '#10B981',
     features: [
       { text: 'Everything in Pro', included: true },
       { text: 'Unlimited team seats', included: true },
@@ -77,10 +77,10 @@ export default function BillingPage() {
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           className="flex items-center justify-between p-5 rounded-2xl"
-          style={{ background: 'rgba(124,107,255,0.08)', border: '1px solid rgba(124,107,255,0.2)' }}
+          style={{ background: 'rgba(99,102,241,0.08)', border: '1px solid rgba(99,102,241,0.2)' }}
         >
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: 'rgba(124,107,255,0.15)', border: '1px solid rgba(124,107,255,0.25)' }}>
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: 'rgba(99,102,241,0.15)', border: '1px solid rgba(99,102,241,0.25)' }}>
               <CreditCard size={18} style={{ color: 'var(--accent)' }} />
             </div>
             <div>
@@ -93,8 +93,8 @@ export default function BillingPage() {
             </div>
           </div>
           <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg" style={{ background: 'rgba(74,222,128,0.1)', border: '1px solid rgba(74,222,128,0.2)' }}>
-            <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: '#4ade80' }} />
-            <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '11px', color: '#4ade80' }}>Active</span>
+            <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: '#10B981' }} />
+            <span style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '11px', color: '#10B981' }}>Active</span>
           </div>
         </motion.div>
 
@@ -118,15 +118,15 @@ export default function BillingPage() {
                 transition={{ delay: i * 0.08 }}
                 className="p-6 rounded-2xl relative overflow-hidden flex flex-col"
                 style={{
-                  background: plan.popular ? 'rgba(124,107,255,0.08)' : 'var(--surface)',
-                  border: `1px solid ${plan.popular ? 'rgba(124,107,255,0.35)' : plan.current ? 'rgba(136,136,170,0.3)' : 'var(--border-color)'}`,
+                  background: plan.popular ? 'rgba(99,102,241,0.08)' : 'var(--surface)',
+                  border: `1px solid ${plan.popular ? 'rgba(99,102,241,0.35)' : plan.current ? 'rgba(136,136,170,0.3)' : 'var(--border-color)'}`,
                 }}
               >
                 {plan.popular && (
                   <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, var(--accent), transparent)' }} />
                 )}
                 {plan.popular && (
-                  <div className="absolute top-4 right-4 px-2 py-0.5 rounded-md" style={{ background: 'rgba(124,107,255,0.2)', border: '1px solid rgba(124,107,255,0.3)', fontFamily: 'var(--font-dm-mono)', fontSize: '9px', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                  <div className="absolute top-4 right-4 px-2 py-0.5 rounded-md" style={{ background: 'rgba(99,102,241,0.2)', border: '1px solid rgba(99,102,241,0.3)', fontFamily: 'var(--font-dm-mono)', fontSize: '9px', color: 'var(--accent)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                     Popular
                   </div>
                 )}
@@ -163,7 +163,7 @@ export default function BillingPage() {
                     fontSize: '13px',
                     border: plan.current ? '1px solid var(--border-color)' : plan.popular ? 'none' : '1px solid var(--border-color)',
                     cursor: plan.current ? 'default' : 'pointer',
-                    boxShadow: plan.popular ? '0 4px 20px rgba(124,107,255,0.3)' : 'none',
+                    boxShadow: plan.popular ? '0 4px 20px rgba(99,102,241,0.3)' : 'none',
                   }}
                 >
                   {plan.current ? 'Current Plan' : (
@@ -186,7 +186,7 @@ export default function BillingPage() {
               className="flex items-start gap-3 p-4 rounded-2xl"
               style={sectionStyle}
             >
-              <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(124,107,255,0.12)', border: '1px solid rgba(124,107,255,0.2)' }}>
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(99,102,241,0.12)', border: '1px solid rgba(99,102,241,0.2)' }}>
                 <Icon size={15} style={{ color: 'var(--accent)' }} />
               </div>
               <div>

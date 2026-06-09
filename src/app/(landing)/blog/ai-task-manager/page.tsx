@@ -35,7 +35,7 @@ export default function TaskManagerBlogPost() {
         style={{ borderColor: 'var(--border-color)', background: 'rgba(8,8,16,0.95)', backdropFilter: 'blur(20px)', position: 'sticky', top: 0, zIndex: 50 }}
       >
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #7c6bff, #ff6b9d)' }}>
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #6366F1, #8B5CF6)' }}>
             <Zap size={15} color="white" fill="white" />
           </div>
           <span style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: '16px', color: 'var(--text)' }}>AutoFlow AI</span>
@@ -52,13 +52,13 @@ export default function TaskManagerBlogPost() {
       </nav>
 
       {/* Hero */}
-      <div style={{ background: 'linear-gradient(180deg, rgba(107,255,204,0.07) 0%, transparent 100%)', borderBottom: '1px solid var(--border-color)', padding: '48px 24px 40px' }}>
+      <div style={{ background: 'linear-gradient(180deg, rgba(16,185,129,0.07) 0%, transparent 100%)', borderBottom: '1px solid var(--border-color)', padding: '48px 24px 40px' }}>
         <div className="max-w-3xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <div className="flex items-center gap-3 mb-5 flex-wrap">
               <span
                 className="px-3 py-1 rounded-full"
-                style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: '#6bffcc', background: 'rgba(107,255,204,0.1)', border: '1px solid rgba(107,255,204,0.2)', letterSpacing: '0.08em', textTransform: 'uppercase' }}
+                style={{ fontFamily: 'var(--font-dm-mono)', fontSize: '10px', color: '#10B981', background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.2)', letterSpacing: '0.08em', textTransform: 'uppercase' }}
               >
                 Task Management
               </span>
@@ -80,7 +80,7 @@ export default function TaskManagerBlogPost() {
             <div className="flex items-center gap-3">
               <div
                 className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0"
-                style={{ background: 'linear-gradient(135deg, #7c6bff, #ff6b9d)', color: 'white', fontFamily: 'var(--font-syne)' }}
+                style={{ background: 'linear-gradient(135deg, #6366F1, #8B5CF6)', color: 'white', fontFamily: 'var(--font-syne)' }}
               >
                 SF
               </div>
@@ -110,8 +110,8 @@ export default function TaskManagerBlogPost() {
           <P>The problem is the maintenance cost. Every task you add requires decisions: What project does this belong to? How urgent is it compared to everything else? What is the deadline? Does it have dependencies? Who else is involved? These decisions take cognitive energy, and that energy compounds quickly when you are dealing with a full workload.</P>
 
           {/* Pull quote */}
-          <div className="my-8 p-6 rounded-2xl flex gap-4" style={{ background: 'rgba(107,255,204,0.06)', border: '1px solid rgba(107,255,204,0.2)' }}>
-            <Quote size={20} style={{ color: '#6bffcc', flexShrink: 0, marginTop: '2px' }} />
+          <div className="my-8 p-6 rounded-2xl flex gap-4" style={{ background: 'rgba(16,185,129,0.06)', border: '1px solid rgba(16,185,129,0.2)' }}>
+            <Quote size={20} style={{ color: '#10B981', flexShrink: 0, marginTop: '2px' }} />
             <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '16px', color: 'var(--text)', lineHeight: 1.75, margin: 0, fontStyle: 'italic' }}>
               The average knowledge worker context-switches more than 300 times per day. Every time you stop to format a task in a tool, you are burning one of those switches on overhead instead of actual work.
             </p>
@@ -142,31 +142,31 @@ export default function TaskManagerBlogPost() {
             {[
               {
                 icon: Zap,
-                color: '#6bffcc',
+                color: '#10B981',
                 title: 'Instant task creation with full structure',
                 desc: 'Describe the task in one sentence and get back a properly structured item with a title, description, priority level, deadline, and tags — without touching a single form field. What used to take 45 seconds of clicking takes two seconds of typing.',
               },
               {
                 icon: TrendingUp,
-                color: '#7c6bff',
+                color: '#6366F1',
                 title: 'Intelligent prioritization of an existing list',
                 desc: 'Tell the AI to analyze your current tasks and suggest which three you should focus on today. It reads your entire list, considers deadlines and priority labels, and gives you a ranked recommendation with reasoning — the kind of analysis that normally requires a full planning session.',
               },
               {
                 icon: ListChecks,
-                color: '#ffb86b',
+                color: '#F59E0B',
                 title: 'Bulk status updates in plain language',
                 desc: '"Mark everything related to the website launch as in progress" or "complete all the research tasks from last week." Instead of clicking through your list one item at a time, a single instruction handles a whole group of updates simultaneously.',
               },
               {
                 icon: Brain,
-                color: '#ff6b9d',
+                color: '#8B5CF6',
                 title: 'Context-aware task suggestions',
                 desc: 'When you describe a project or goal, the AI can suggest the individual tasks needed to get there. "I need to prepare for a product demo next Friday" becomes a structured list of preparation steps, each with appropriate priorities and timelines.',
               },
               {
                 icon: Target,
-                color: '#6bffcc',
+                color: '#10B981',
                 title: 'Productivity coaching built into the workflow',
                 desc: 'After processing your request, the agent offers one actionable productivity tip relevant to your current situation — not generic advice, but something specific to the tasks and patterns it can see in your list.',
               },
@@ -192,22 +192,22 @@ export default function TaskManagerBlogPost() {
               {
                 input: '"I have a client call tomorrow at 2pm and I need to prepare talking points, review their last invoice, and make sure the proposal deck is updated."',
                 output: 'Three separate tasks created: prepare talking points (high, due tomorrow morning), review client invoice (medium, due today), update proposal deck (high, due tomorrow). Each with a meaningful description and the client call as shared context.',
-                color: '#7c6bff',
+                color: '#6366F1',
               },
               {
                 input: '"What are the most urgent things I should do today?"',
                 output: 'The AI scans your task list, identifies items with nearest deadlines and highest priority flags, and returns a ranked list of three to five specific tasks with a brief explanation of why each made the cut.',
-                color: '#6bffcc',
+                color: '#10B981',
               },
               {
                 input: '"The vendor onboarding is done. Mark it complete and create a follow-up task to check in with them in two weeks."',
                 output: 'Status of vendor onboarding task updated to completed. New task created: check in with vendor, medium priority, due date set two weeks from today.',
-                color: '#ffb86b',
+                color: '#F59E0B',
               },
               {
                 input: '"I need to launch a new landing page by end of month. What tasks do I need?"',
                 output: 'A set of structured tasks covering copywriting, design, development, testing, and deployment — each with a suggested priority and estimated time, organized logically so dependencies are clear.',
-                color: '#ff6b9d',
+                color: '#8B5CF6',
               },
             ].map(({ input, output, color }, i) => (
               <div key={i} className="rounded-2xl overflow-hidden" style={{ border: `1px solid ${color}25` }}>
@@ -231,31 +231,31 @@ export default function TaskManagerBlogPost() {
             {[
               {
                 num: '01',
-                color: '#6bffcc',
+                color: '#10B981',
                 title: 'Include the deadline in the description',
                 desc: 'Saying "by end of week" or "before Thursday\'s meeting" or "within the next two hours" gives the AI the context it needs to assign accurate deadlines. Without a time reference, it will create the task but may leave the due date empty.',
               },
               {
                 num: '02',
-                color: '#7c6bff',
+                color: '#6366F1',
                 title: 'Use urgency language intentionally',
                 desc: 'Words like "urgent," "critical," "as soon as possible," and "before anything else" map directly to high priority. Words like "whenever you get a chance" and "low priority but worth doing" map to low. The AI reads these signals and applies them correctly.',
               },
               {
                 num: '03',
-                color: '#ffb86b',
+                color: '#F59E0B',
                 title: 'Ask for a daily focus review',
                 desc: 'Start your morning by asking the AI to identify your top three priorities for the day from your current list. This takes ten seconds and replaces the mental overhead of trying to evaluate everything yourself at the start of a workday when your list is long.',
               },
               {
                 num: '04',
-                color: '#ff6b9d',
+                color: '#8B5CF6',
                 title: 'Use it to break down large goals',
                 desc: 'If you have a project or goal that feels overwhelming, describe it to the AI and ask it to suggest the individual tasks. This is one of the highest-value uses of the tool — turning a vague goal into a concrete, manageable list of specific actions.',
               },
               {
                 num: '05',
-                color: '#6bffcc',
+                color: '#10B981',
                 title: 'Review the list periodically',
                 desc: 'Ask the AI to look at your full task list and flag anything that looks overdue, incorrectly prioritized, or possibly stale. This kind of periodic list hygiene is essential for keeping the system reliable, and it takes the AI seconds to do what would take you ten minutes manually.',
               },
@@ -295,9 +295,9 @@ export default function TaskManagerBlogPost() {
               },
             ].map(({ title, desc }) => (
               <div key={title} className="flex gap-3 p-4 rounded-xl" style={{ background: 'rgba(248,113,113,0.05)', border: '1px solid rgba(248,113,113,0.15)' }}>
-                <AlertCircle size={15} style={{ color: '#f87171', flexShrink: 0, marginTop: '2px' }} />
+                <AlertCircle size={15} style={{ color: '#EF4444', flexShrink: 0, marginTop: '2px' }} />
                 <div>
-                  <p style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '13px', color: '#f87171', marginBottom: '3px' }}>{title}</p>
+                  <p style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '13px', color: '#EF4444', marginBottom: '3px' }}>{title}</p>
                   <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '13px', color: 'var(--text-muted)', lineHeight: 1.65, margin: 0 }}>{desc}</p>
                 </div>
               </div>
@@ -312,8 +312,8 @@ export default function TaskManagerBlogPost() {
           <P>The act of writing something down — even in a rudimentary note — reduces that cognitive load. But the act of navigating to the right app, opening the right project, filling in the right fields, and correctly categorizing the task before you can relax adds load back. The net gain from using a poorly designed task manager is sometimes smaller than it looks.</P>
 
           {/* Insight callout */}
-          <div className="my-8 p-6 rounded-2xl flex gap-4" style={{ background: 'rgba(107,255,204,0.06)', border: '1px solid rgba(107,255,204,0.2)' }}>
-            <Lightbulb size={20} style={{ color: '#6bffcc', flexShrink: 0, marginTop: '2px' }} />
+          <div className="my-8 p-6 rounded-2xl flex gap-4" style={{ background: 'rgba(16,185,129,0.06)', border: '1px solid rgba(16,185,129,0.2)' }}>
+            <Lightbulb size={20} style={{ color: '#10B981', flexShrink: 0, marginTop: '2px' }} />
             <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '16px', color: 'var(--text)', lineHeight: 1.75, margin: 0 }}>
               Getting a task out of your head should be the easiest part of your day. If the tool you use makes it harder than a sticky note, the tool is working against you.
             </p>
@@ -338,10 +338,10 @@ export default function TaskManagerBlogPost() {
           <P>Try it with your real workload, on a real day. That is when the difference becomes obvious.</P>
 
           {/* CTA */}
-          <div className="mt-12 p-8 rounded-2xl text-center relative overflow-hidden" style={{ background: 'rgba(107,255,204,0.06)', border: '1px solid rgba(107,255,204,0.2)' }}>
-            <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(107,255,204,0.5), transparent)' }} />
-            <div className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ background: 'rgba(107,255,204,0.12)', border: '1px solid rgba(107,255,204,0.2)' }}>
-              <CheckSquare size={20} style={{ color: '#6bffcc' }} />
+          <div className="mt-12 p-8 rounded-2xl text-center relative overflow-hidden" style={{ background: 'rgba(16,185,129,0.06)', border: '1px solid rgba(16,185,129,0.2)' }}>
+            <div className="absolute top-0 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(16,185,129,0.5), transparent)' }} />
+            <div className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ background: 'rgba(16,185,129,0.12)', border: '1px solid rgba(16,185,129,0.2)' }}>
+              <CheckSquare size={20} style={{ color: '#10B981' }} />
             </div>
             <h3 style={{ fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: '20px', color: 'var(--text)', marginBottom: '10px' }}>
               Try the Task Manager Agent Free
@@ -351,7 +351,7 @@ export default function TaskManagerBlogPost() {
             </p>
             <Link
               href="/dashboard/tasks"
-              style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#6bffcc', color: '#0a0a12', padding: '12px 28px', borderRadius: '12px', fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: '14px', boxShadow: '0 4px 20px rgba(107,255,204,0.25)' }}
+              style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#10B981', color: '#0F172A', padding: '12px 28px', borderRadius: '12px', fontFamily: 'var(--font-syne)', fontWeight: 800, fontSize: '14px', boxShadow: '0 4px 20px rgba(16,185,129,0.25)' }}
             >
               <CheckSquare size={15} />
               Open Task Manager

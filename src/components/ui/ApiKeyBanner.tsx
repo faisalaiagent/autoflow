@@ -28,9 +28,9 @@ export function ApiKeyBanner() {
           border: '1px solid rgba(251,191,36,0.25)',
         }}
       >
-        <AlertTriangle size={16} style={{ color: '#fbbf24', flexShrink: 0, marginTop: '2px' }} />
+        <AlertTriangle size={16} style={{ color: '#F59E0B', flexShrink: 0, marginTop: '2px' }} />
         <div className="flex-1 min-w-0">
-          <p style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '13px', color: '#fbbf24' }}>
+          <p style={{ fontFamily: 'var(--font-syne)', fontWeight: 700, fontSize: '13px', color: '#F59E0B' }}>
             Groq API key not configured
           </p>
           <p style={{ fontFamily: 'var(--font-instrument)', fontSize: '12px', color: 'var(--text-muted)', marginTop: '2px' }}>
@@ -40,7 +40,7 @@ export function ApiKeyBanner() {
               href="https://console.groq.com"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: '#fbbf24', textDecoration: 'underline' }}
+              style={{ color: '#F59E0B', textDecoration: 'underline' }}
             >
               console.groq.com
             </a>
@@ -52,7 +52,7 @@ export function ApiKeyBanner() {
             className="flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs"
             style={{
               background: 'rgba(251,191,36,0.15)',
-              color: '#fbbf24',
+              color: '#F59E0B',
               fontFamily: 'var(--font-syne)',
               fontWeight: 600,
               textDecoration: 'none',

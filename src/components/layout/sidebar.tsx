@@ -11,11 +11,11 @@ import { useRouter } from 'next/navigation';
 
 const navItems = [
   { href: '/dashboard', icon: LayoutDashboard, label: 'Overview', exact: true },
-  { href: '/dashboard/email', icon: Mail, label: 'Email Agent', color: '#7c6bff' },
-  { href: '/dashboard/meeting', icon: Users, label: 'Meeting Intel', color: '#ff6b9d' },
-  { href: '/dashboard/tasks', icon: CheckSquare, label: 'Task Manager', color: '#6bffcc' },
-  { href: '/dashboard/calendar', icon: Calendar, label: 'AI Calendar', color: '#ffb86b' },
-  { href: '/dashboard/analytics', icon: BarChart3, label: 'Analytics', color: '#7c6bff' },
+  { href: '/dashboard/email', icon: Mail, label: 'Email Agent', color: '#6366F1' },
+  { href: '/dashboard/meeting', icon: Users, label: 'Meeting Intel', color: '#8B5CF6' },
+  { href: '/dashboard/tasks', icon: CheckSquare, label: 'Task Manager', color: '#10B981' },
+  { href: '/dashboard/calendar', icon: Calendar, label: 'AI Calendar', color: '#F59E0B' },
+  { href: '/dashboard/analytics', icon: BarChart3, label: 'Analytics', color: '#6366F1' },
   { href: '/dashboard/settings', icon: Settings, label: 'Settings' },
 ];
 
@@ -39,22 +39,22 @@ export function DashboardSidebar() {
       {/* Logo */}
       <div className="p-6 border-b border-[#2a2a3a]">
         <Link href="/" className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#7c6bff] to-[#ff6b9d] flex items-center justify-center flex-shrink-0">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#6366F1] to-[#8B5CF6] flex items-center justify-center flex-shrink-0">
             <Zap size={14} className="text-white" />
           </div>
           <div>
             <div className="font-display font-bold text-white text-sm leading-tight">AutoFlow</div>
-            <div className="font-mono-custom text-[#7c6bff] text-[10px] uppercase tracking-widest">AI Workspace</div>
+            <div className="font-mono-custom text-[#6366F1] text-[10px] uppercase tracking-widest">AI Workspace</div>
           </div>
         </Link>
       </div>
 
       {/* Groq badge */}
       <div className="mx-4 mt-4">
-        <div className="flex items-center gap-2 bg-[#7c6bff]/10 border border-[#7c6bff]/20 rounded-lg px-3 py-2">
-          <Sparkles size={12} className="text-[#7c6bff]" />
-          <span className="font-mono-custom text-[10px] text-[#7c6bff] uppercase tracking-widest">Groq LLaMA 3</span>
-          <span className="ml-auto w-1.5 h-1.5 bg-[#6bffcc] rounded-full animate-pulse" />
+        <div className="flex items-center gap-2 bg-[#6366F1]/10 border border-[#6366F1]/20 rounded-lg px-3 py-2">
+          <Sparkles size={12} className="text-[#6366F1]" />
+          <span className="font-mono-custom text-[10px] text-[#6366F1] uppercase tracking-widest">Groq LLaMA 3</span>
+          <span className="ml-auto w-1.5 h-1.5 bg-[#10B981] rounded-full animate-pulse" />
         </div>
       </div>
 
@@ -72,20 +72,20 @@ export function DashboardSidebar() {
               className={cn(
                 'flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm transition-all group',
                 active
-                  ? 'bg-[#7c6bff]/15 text-white border border-[#7c6bff]/25'
+                  ? 'bg-[#6366F1]/15 text-white border border-[#6366F1]/25'
                   : 'text-[#8888aa] hover:text-white hover:bg-[#1a1a24]'
               )}
             >
               <item.icon
                 size={16}
-                style={{ color: active ? (item.color || '#7c6bff') : undefined }}
+                style={{ color: active ? (item.color || '#6366F1') : undefined }}
                 className={active ? '' : 'group-hover:text-white transition-colors'}
               />
               <span className="font-medium">{item.label}</span>
               {active && (
                 <span
                   className="ml-auto w-1.5 h-1.5 rounded-full"
-                  style={{ background: item.color || '#7c6bff' }}
+                  style={{ background: item.color || '#6366F1' }}
                 />
               )}
             </Link>

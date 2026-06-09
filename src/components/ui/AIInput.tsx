@@ -38,7 +38,7 @@ export const AIInput = forwardRef<HTMLInputElement, AIInputProps>(
         }}
         onFocus={(e) => {
           e.target.style.borderColor = 'var(--accent)';
-          e.target.style.boxShadow = '0 0 0 3px rgba(124,107,255,0.1)';
+          e.target.style.boxShadow = '0 0 0 3px rgba(99,102,241,0.1)';
         }}
         onBlur={(e) => {
           e.target.style.borderColor = error ? 'var(--danger)' : 'var(--border-color)';
@@ -93,7 +93,7 @@ export const AITextarea = forwardRef<HTMLTextAreaElement, AITextareaProps>(
         }}
         onFocus={(e) => {
           e.target.style.borderColor = 'var(--accent)';
-          e.target.style.boxShadow = '0 0 0 3px rgba(124,107,255,0.1)';
+          e.target.style.boxShadow = '0 0 0 3px rgba(99,102,241,0.1)';
         }}
         onBlur={(e) => {
           e.target.style.borderColor = error ? 'var(--danger)' : 'var(--border-color)';

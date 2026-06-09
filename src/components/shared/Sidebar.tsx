@@ -10,11 +10,11 @@ import { cn } from '@/lib/utils'
 
 const navItems = [
   { href: '/dashboard', icon: LayoutDashboard, label: 'Dashboard', section: 'main' },
-  { href: '/email', icon: Mail, label: 'Email Agent', section: 'agents', accent: '#7c6bff' },
-  { href: '/meetings', icon: Video, label: 'Meetings', section: 'agents', accent: '#ff6b9d' },
-  { href: '/tasks', icon: CheckSquare, label: 'Task Manager', section: 'agents', accent: '#6bffcc' },
-  { href: '/calendar', icon: Calendar, label: 'AI Calendar', section: 'agents', accent: '#ffb86b' },
-  { href: '/analytics', icon: BarChart3, label: 'Analytics', section: 'system', accent: '#7c6bff' },
+  { href: '/email', icon: Mail, label: 'Email Agent', section: 'agents', accent: '#6366F1' },
+  { href: '/meetings', icon: Video, label: 'Meetings', section: 'agents', accent: '#8B5CF6' },
+  { href: '/tasks', icon: CheckSquare, label: 'Task Manager', section: 'agents', accent: '#10B981' },
+  { href: '/calendar', icon: Calendar, label: 'AI Calendar', section: 'agents', accent: '#F59E0B' },
+  { href: '/analytics', icon: BarChart3, label: 'Analytics', section: 'system', accent: '#6366F1' },
   { href: '/settings', icon: Settings, label: 'Settings', section: 'system', accent: '#8888aa' },
   { href: '/billing', icon: CreditCard, label: 'Billing', section: 'system', accent: '#8888aa' },
   { href: '/profile', icon: User, label: 'Profile', section: 'system', accent: '#8888aa' },
@@ -48,8 +48,8 @@ export default function Sidebar({ onClose }: SidebarProps) {
           whileHover={{ x: 2 }}
           className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl transition-all cursor-pointer"
           style={{
-            background: isActive ? 'rgba(124,107,255,0.12)' : 'transparent',
-            border: isActive ? '1px solid rgba(124,107,255,0.2)' : '1px solid transparent',
+            background: isActive ? 'rgba(99,102,241,0.12)' : 'transparent',
+            border: isActive ? '1px solid rgba(99,102,241,0.2)' : '1px solid transparent',
           }}
         >
           <Icon
